@@ -31,7 +31,7 @@ class SwapCardScraper:
             },
             {
                 "operationName": "SelfVisibilityOnEvent",
-                "variables": {"eventId": "RXZlbnRfMjU3MTcxMQ=="},
+                "variables": {"eventId": config.EVENT_ID},
                 "extensions": {
                     "persistedQuery": {
                         "version": 1,
@@ -41,7 +41,7 @@ class SwapCardScraper:
             },
             {
                 "operationName": "EventPeopleListViewConnections",
-                "variables": {"eventId": "RXZlbnRfMjU3MTcxMQ=="},
+                "variables": {"eventId": config.EVENT_ID},
                 "extensions": {
                     "persistedQuery": {
                         "version": 1,
@@ -51,7 +51,7 @@ class SwapCardScraper:
             },
             {
                 "operationName": "EventAvailabilityFilterListViewQuery",
-                "variables": {"viewId": "RXZlbnRWaWV3XzEwNTU5ODE="},
+                "variables": {"viewId": config.VIEW_ID},
                 "extensions": {
                     "persistedQuery": {
                         "version": 1,
@@ -62,7 +62,7 @@ class SwapCardScraper:
             {
                 "operationName": "EventPeopleListViewConnectionQuery",
                 "variables": {
-                    "viewId": "RXZlbnRWaWV3XzEwNTU5ODE="
+                    "viewId": config.VIEW_ID
                     # No cursor for initial request
                 },
                 "extensions": {
@@ -84,7 +84,7 @@ class SwapCardScraper:
             },
             {
                 "operationName": "CurrentEventPersonProviderQuery",
-                "variables": {"eventId": "RXZlbnRfMjU3MTcxMQ=="},
+                "variables": {"eventId": config.EVENT_ID},
                 "extensions": {
                     "persistedQuery": {
                         "version": 1,
@@ -109,7 +109,7 @@ class SwapCardScraper:
         return [{
             "operationName": "EventPeopleListViewConnectionQuery",
             "variables": {
-                "viewId": "RXZlbnRWaWV3XzEwNTU5ODE=",
+                "viewId": config.VIEW_ID,
                 "endCursor": cursor
             },
             "extensions": {

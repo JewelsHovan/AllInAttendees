@@ -6,20 +6,214 @@ Batch fetch detailed attendee information using the working fetcher
 import json
 import csv
 import time
+import requests
 from pathlib import Path
 from datetime import datetime
-from typing import Dict, List
+from typing import Dict, List, Optional
 import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import sys
-import os
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
-from old.fetch_attendee_details import AttendeeDetailsFetcher
 import config
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
+
+class AttendeeDetailsFetcher:
+    def __init__(self):
+        self.url = config.GRAPHQL_URL
+        self.headers = config.HEADERS.copy()
+        self.cookies = config.COOKIES.copy()
+        self.event_id = config.EVENT_ID
+
+    def build_detail_query(self, person_id: str) -> List[Dict]:
+        """Build the GraphQL query to fetch detailed attendee information"""
+        return [
+            {
+                "operationName": "EventPersonDetailsQuery",
+                "variables": {
+                    "skipMeetings": True,
+                    "withEvent": True,
+                    "withHostedBuyerView": False,
+                    "personId": person_id,
+                    "userId": "",
+                    "eventId": self.event_id,
+                    "viewId": ""
+                },
+                "extensions": {
+                    "persistedQuery": {
+                        "version": 1,
+                        "sha256Hash": "b0e088da2df3b4f5c63d871d4f0e628da4fe3b582e5f7478bcbf4fa6421fecd0"
+                    }
+                }
+            },
+            {
+                "operationName": "PersonUserId",
+                "variables": {
+                    "personId": person_id
+                },
+                "extensions": {
+                    "persistedQuery": {
+                        "version": 1,
+                        "sha256Hash": "109137c30f77f624ffa4263a20e90a0a4fc9e9e7ddade6a7a5039a935b69e1b0"
+                    }
+                }
+            },
+            {
+                "operationName": "SingleCommunityQuery",
+                "variables": {},
+                "extensions": {
+                    "persistedQuery": {
+                        "version": 1,
+                        "sha256Hash": "0fbbcdbf8bde4a9b8986bb9982f3d875d0ffb56f8e742c28ec9e958cc2729f8c"
+                    }
+                }
+            },
+            {
+                "operationName": "CurrentEventPersonProviderQuery",
+                "variables": {
+                    "eventId": self.event_id
+                },
+                "extensions": {
+                    "persistedQuery": {
+                        "version": 1,
+                        "sha256Hash": "dd75ad419aef13cd3cc94c3115b8323f05ea5b0bab929b74a953f455a2c873dd"
+                    }
+                }
+            },
+            {
+                "operationName": "ApplicationProvider_CurrentCommunity",
+                "variables": {
+                    "communitySlug": "all-in"
+                },
+                "extensions": {
+                    "persistedQuery": {
+                        "version": 1,
+                        "sha256Hash": "1d630032bb7429fef5056900473d82b31f00d49569654de2234017d4c0002bec"
+                    }
+                }
+            }
+        ]
+
+    def extract_about_me_fields(self, response_data: List[Dict]) -> Dict:
+        """Extract the About Me fields from the API response"""
+        about_me_data = {}
+        
+        for result in response_data:
+            if 'data' in result and 'person' in result['data']:
+                person = result['data']['person']
+                
+                # Basic info
+                about_me_data['id'] = person.get('id', '')
+                about_me_data['firstName'] = person.get('firstName', '')
+                about_me_data['lastName'] = person.get('lastName', '')
+                about_me_data['jobTitle'] = person.get('jobTitle', '')
+                about_me_data['organization'] = person.get('organization', '')
+                about_me_data['biography'] = person.get('biography', '')
+                about_me_data['email'] = person.get('email', '')
+                about_me_data['websiteUrl'] = person.get('websiteUrl', '')
+                
+                # Phone numbers
+                about_me_data['mobilePhone'] = person.get('mobilePhone', '')
+                about_me_data['landlinePhone'] = person.get('landlinePhone', '')
+                
+                # Address/Location
+                if 'address' in person and person['address']:
+                    address = person['address']
+                    about_me_data['city'] = address.get('city', '')
+                    about_me_data['country'] = address.get('country', '')
+                    about_me_data['state'] = address.get('state', '')
+                
+                # Social links
+                if 'socialNetworks' in person and person['socialNetworks']:
+                    for network in person['socialNetworks']:
+                        network_type = network.get('type', '').lower()
+                        profile = network.get('profile', '')
+                        # Build full URL for LinkedIn
+                        if network_type == 'linkedin' and profile:
+                            about_me_data[f'social_{network_type}'] = f'https://www.linkedin.com/in/{profile}'
+                        else:
+                            about_me_data[f'social_{network_type}'] = profile
+                
+                # Custom fields from withEvent.fields (About Me section)
+                if 'withEvent' in person and person['withEvent']:
+                    with_event = person['withEvent']
+                    
+                    if 'fields' in with_event:
+                        for field in with_event['fields']:
+                            field_name = field.get('name', '')
+                            
+                            # Handle different field types
+                            if field.get('__typename') == 'Core_MultipleSelectField':
+                                # For multiple select fields (like Interests)
+                                if 'values' in field and field['values']:
+                                    values = [v.get('text', '') for v in field['values']]
+                                    field_value = ' | '.join(values)
+                                else:
+                                    field_value = ''
+                            elif field.get('__typename') == 'Core_SelectField':
+                                # For single select fields
+                                if 'value' in field and field['value']:
+                                    field_value = field['value'].get('text', '')
+                                else:
+                                    field_value = ''
+                            else:
+                                # For other field types
+                                field_value = field.get('value', '')
+                            
+                            # Map field names to cleaner keys
+                            field_mapping = {
+                                'Country': 'detail_country',
+                                'Province': 'detail_province', 
+                                'Category': 'detail_category',
+                                'Industry': 'detail_industry',
+                                'Organization type': 'detail_org_type',
+                                'Organization AI Maturity': 'detail_ai_maturity',
+                                'Position type': 'detail_position_type',
+                                'Motivation': 'detail_motivation',
+                                'Language': 'detail_language',
+                                'Interests': 'detail_interests'
+                            }
+                            
+                            # Store the field value
+                            if field_name in field_mapping:
+                                about_me_data[field_mapping[field_name]] = field_value
+                            else:
+                                # Store any other fields with cleaned name
+                                clean_name = field_name.replace(' ', '_').replace('-', '_').lower()
+                                about_me_data[f'field_{clean_name}'] = field_value
+                
+                break  # Found the person data, no need to continue
+        
+        return about_me_data
+
+    def fetch_attendee_details(self, person_id: str, save_raw: bool = False) -> Optional[Dict]:
+        """Fetch detailed information for a single attendee"""
+        try:
+            query = self.build_detail_query(person_id)
+            response = requests.post(
+                self.url,
+                headers=self.headers,
+                cookies=self.cookies,
+                json=query,
+                timeout=30
+            )
+            
+            if response.status_code == 200:
+                data = response.json()
+                
+                # Save raw response for debugging
+                if save_raw:
+                    with open('data/raw_attendee_response.json', 'w', encoding='utf-8') as f:
+                        json.dump(data, f, indent=2, ensure_ascii=False)
+                    print("💾 Raw response saved to data/raw_attendee_response.json")
+                
+                return self.extract_about_me_fields(data)
+            else:
+                print(f"❌ Failed to fetch details for {person_id}: {response.status_code}")
+                return None
+                
+        except Exception as e:
+            print(f"❌ Error fetching details for {person_id}: {e}")
+            return None
 
 class BatchProcessor:
     def __init__(self, num_workers: int = None, delay_seconds: float = None):
