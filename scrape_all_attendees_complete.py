@@ -248,7 +248,8 @@ class SwapCardScraper:
                         
                         # Save checkpoint periodically
                         if page_num % save_interval == 0:
-                            self.save_checkpoint(f"data/checkpoints/checkpoint_{page_num}.json")
+                            checkpoint_path = config.CHECKPOINT_DIR / f"checkpoint_{page_num}.json"
+                            self.save_checkpoint(str(checkpoint_path))
                             print(f"💾 Checkpoint saved")
                         
                         cursor = next_cursor
@@ -294,8 +295,11 @@ class SwapCardScraper:
                 'timestamp': time.strftime('%Y-%m-%d %H:%M:%S')
             }, f, indent=2, ensure_ascii=False)
 
-    def save_to_csv(self, filename: str = "data/csv/all_attendees_final.csv"):
+    def save_to_csv(self, filename: str = None):
         """Save all attendees to CSV file"""
+        if filename is None:
+            filename = str(config.ATTENDEES_CSV)
+        
         if not self.all_attendees:
             print("No attendees to save")
             return
@@ -313,9 +317,10 @@ class SwapCardScraper:
         print(f"💾 Saved {len(self.all_attendees)} attendees to {filename}")
 
     def save_to_json(self, filename: str = None):
-        if filename is None:
-            filename = config.ATTENDEES_JSON
         """Save all attendees to JSON file"""
+        if filename is None:
+            filename = str(config.ATTENDEES_JSON)
+        
         import os
         os.makedirs(os.path.dirname(filename), exist_ok=True)
         
@@ -373,16 +378,9 @@ if __name__ == "__main__":
     attendees = scraper.scrape_all_attendees(save_interval=10)
     
     if attendees:
-        # Save to both CSV and JSON with timestamp
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        
-        # Save with timestamp
-        scraper.save_to_csv(f"data/csv/all_attendees_{timestamp}.csv")
-        scraper.save_to_json(f"data/all_attendees_{timestamp}.json")
-        
-        # Also save as "latest" for easy access
-        scraper.save_to_csv("data/csv/all_attendees_latest.csv")
-        scraper.save_to_json("data/all_attendees_latest.json")
+        # Save to the configured output paths
+        scraper.save_to_csv()
+        scraper.save_to_json()
         
         # Print summary
         scraper.print_summary()

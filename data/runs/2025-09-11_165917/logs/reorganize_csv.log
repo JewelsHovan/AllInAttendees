@@ -1,0 +1,48 @@
+Original columns: ['biography', 'detail_ai_maturity', 'detail_category', 'detail_country', 'detail_industry', 'detail_interests', 'detail_language', 'detail_motivation', 'detail_org_type', 'detail_position_type', 'detail_province', 'email', 'firstName', 'id', 'jobTitle', 'landlinePhone', 'lastName', 'mobilePhone', 'organization', 'photoUrl', 'social_dribbble', 'social_facebook', 'social_github', 'social_googleplus', 'social_instagram', 'social_linkedin', 'social_pinterest', 'social_skype', 'social_twitter', 'social_vimeo', 'social_youtube', 'userId', 'websiteUrl']
+Total attendees: 2597
+
+🧹 Cleaning text in all columns...
+
+✅ Reorganized CSV saved to: data/runs/2025-09-11_165917/all_attendees_organized.csv
+✅ Excel-safe version saved to: data/runs/2025-09-11_165917/all_attendees_organized_excel_safe.csv
+Final columns (33): ['First Name', 'Last Name', 'Job Title', 'Organization', 'Country', 'Province/State', 'Attendee Category', 'Industry', 'Organization Type', 'Position Type']...
+
+Sample of reorganized data:
+      First Name  ...                              Attendee Category
+0           Hugo  ...  Service Provider - AI or digital technologies
+1       Philippe  ...  Service Provider - AI or digital technologies
+2  Jean Francois  ...  Service Provider - AI or digital technologies
+3           Carl  ...  Service Provider - AI or digital technologies
+4       Isabelle  ...  Service Provider - AI or digital technologies
+
+[5 rows x 5 columns]
+
+📊 Statistics:
+Total attendees: 2597
+Countries represented: 25
+Industries: 20
+Organizations: 1387
+
+🏆 Top 5 Countries:
+Canada           2162
+United States      87
+France             30
+Tunisia            15
+Japan               9
+Name: Country, dtype: int64
+
+🏢 Top 5 Industries:
+Software & Internet    456
+Business Services      324
+Other                  168
+Government             165
+Financial Services     158
+Name: Industry, dtype: int64
+
+🎯 AI Maturity Distribution:
+Strategic adoption          1232
+Pilot project underway       365
+Partial deployment           307
+Interest, but no project     184
+No initiative planned         85
+Name: AI Maturity Level, dtype: int64

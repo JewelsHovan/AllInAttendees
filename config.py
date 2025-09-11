@@ -4,6 +4,23 @@ Centralized configuration for All In 2025 scraping scripts
 Contains authentication tokens, headers, and API endpoints
 """
 
+import os
+from datetime import datetime
+from pathlib import Path
+
+# Get run timestamp from environment or create new one
+RUN_TIMESTAMP = os.environ.get('RUN_TIMESTAMP', datetime.now().strftime('%Y-%m-%d_%H%M%S'))
+
+# Base data directory
+DATA_DIR = Path('data')
+RUNS_DIR = DATA_DIR / 'runs'
+CURRENT_RUN_DIR = RUNS_DIR / RUN_TIMESTAMP
+LOGS_DIR = CURRENT_RUN_DIR / 'logs'
+
+# Create directories if they don't exist
+CURRENT_RUN_DIR.mkdir(parents=True, exist_ok=True)
+LOGS_DIR.mkdir(parents=True, exist_ok=True)
+
 # API Endpoints
 GRAPHQL_URL = "https://app.swapcard.com/api/graphql"
 BASE_URL = "https://app.swapcard.com"
@@ -17,7 +34,7 @@ VIEW_ID = "RXZlbnRWaWV3XzEwNTU5ODE="
 HEADERS = {
     'accept': '*/*',
     'accept-language': 'en-US,en;q=0.9',
-    'authorization': 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JlQXBpVXNlcklkIjoiVlhObGNsOHlOVEUxT0RVNU1RPT0iLCJwZXJtaXNzaW9ucyI6W10sInNlc3Npb25JZCI6IjY4YzFjMGFkZDYwYjNjODFkOTE2NWM5YiIsInR5cGUiOiJhY2Nlc3MtdG9rZW4iLCJ1c2VySWQiOiI2ODc5MjAxNWVhZDUyZmY1ZjA3MzcxNmIiLCJlbWFpbFZlcmlmaWVkIjp0cnVlLCJpYXQiOjE3NTc1MzI5MjYsImV4cCI6MTc1NzYxOTMyNiwiaXNzIjoiYXV0aC1hcGkifQ.ZCdBYB1_bomfLh-mSfZltSXUXuMF4DZFOHARRGQRcXz51mzqYJ442xDPoDpGsnAEbxW-jvkCLvJW1ocasfBNkEjNJJFxaluyIBVO6hnX8_zRyRs1yP1gfSFvvWa7ezmF8umfYIuUFUnKQKsG4c5qTwNjvGM6TbnQH8H-FAlYw4jh-2xvR31fwRTWdguyd-5uYEtP6wL2OXqwoFBZT0ou5Taq2SY4jTGEqsOUkDqfw8cF_C9ZBslf8MOcaoEKUcu17FPGTpRwyqhFLmP3atOxm5aw6iUGEG0jw7O6iOFTcTTq0TrkkjpDafNcUNaaEFB3lhBVPi0K7z-f4-ONrYo7PoiI7HK7OuETNE_HpuirXeOl1vJaNLziatbIOyGyvrZmjrDxwJBM8AYrXV6JDdGr4_JjlI75DVWRwaV3V2F6GS4DgFAc66SfUVfoFF1bcZ6u0JO2lRbS4UVPNu8UIuBaCKeiQfuUWxlVlfEUi-WUUviVvwP8t8NZ4d1AVQUdIAPT_VBxgXFeakJ3RJlKcmQph0FyLkk9Ul_tXIfdlinTLeMLMx9GfIBEXVk0R4AKSeb7dp00xJQ_2MI7ChORKJLOMZ2o7obb9X40A_aH3vwp4d-DqnfETaEEPar3inwhZBPBJqbFa__F7TuYDp_1ZJJfwvCemUglLbXmeGJ8dCiDjg0',
+    'authorization': 'Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3JlQXBpVXNlcklkIjoiVlhObGNsOHlOVEUxT0RVNU1RPT0iLCJwZXJtaXNzaW9ucyI6W10sInNlc3Npb25JZCI6IjY4YzFjMGFkZDYwYjNjODFkOTE2NWM5YiIsInR5cGUiOiJhY2Nlc3MtdG9rZW4iLCJ1c2VySWQiOiI2ODc5MjAxNWVhZDUyZmY1ZjA3MzcxNmIiLCJlbWFpbFZlcmlmaWVkIjp0cnVlLCJpYXQiOjE3NTc2MjQwNjQsImV4cCI6MTc1NzcxMDQ2NCwiaXNzIjoiYXV0aC1hcGkifQ.UBtfjKmHxNUBufQol6AfhEnNXRyUJnNn2p9wuiMvtfEIfRZUGIqb2YBF2QDtV4hYCDq7r4XDm_bQbKIHyqZ8mME6YHkVIFGhWvxDrq-mSVipnBatWDV84RzU7MfcZ4WWeW6OFyQ6A0kTWB3S32k7m0kHR7zUm4ocWCiQad_2ehfL9GOwXBUvwVo5fob840kfmK4r996WVapNxbXP46yzmbw680QEDzmFCmYypumtA2XZqpOiV8P4h9yJtldBTKM5ftptvBFbGPDLYA-wQmnW6brd1aKmvNxu6u43cnPTrKWPh8-UT7IVHPBBxZr4xqUmS7Fbftd_V9q5mx6vp3bwiEWaQ0Qu6ln-wqYXvuy5HN9bUvTcLeRcoyJ7SNL6xagaeVGRxIT9obb5H_tOwqaU7iIa-pCUNWi5rPprcYfKpujp-iCK0oFtNdP-1DFlNIDPFB93x_25KJyB-4SjX_t4qzsSUjrU9aw2qvsRsD1OET-NORGbzhJ2hfhYXa1xy1IszRAj0-dxUdje0gVaVc2O5qhDz5Y6k4ni6yEJ7R5I81i9RCLxQ0__lZIHenV4t4V1Lv_I5Etu6ouO4oCin4Gv8CnDbRThNU8tg95nPN-ZU5GEZsmVFUbpqT0V7E85YrMVm-zBY0l14bLCXwyuXBGIzscfVyUQZ76HepWrAS_c-Xg',
     'content-type': 'application/json',
     'dnt': '1',
     'origin': 'https://app.swapcard.com',
@@ -60,15 +77,17 @@ DEFAULT_WORKERS = 5
 DEFAULT_DELAY_SECONDS = 0.5
 DEFAULT_REQUESTS_PER_SECOND = 2.0
 
-# File paths
-DATA_DIR = 'data'
-CSV_DIR = 'data/csv'
-CHECKPOINT_DIR = 'data/checkpoints'
+# File paths for current run
+ATTENDEES_JSON = CURRENT_RUN_DIR / 'all_attendees.json'
+ATTENDEES_CSV = CURRENT_RUN_DIR / 'all_attendees.csv'
+ATTENDEES_WITH_DETAILS_JSON = CURRENT_RUN_DIR / 'all_attendees_with_details.json'
+ATTENDEES_WITH_DETAILS_CSV = CURRENT_RUN_DIR / 'all_attendees_with_details.csv'
+ATTENDEES_ORGANIZED_CSV = CURRENT_RUN_DIR / 'all_attendees_organized.csv'
+
+# Checkpoint directory (shared across runs for recovery)
+CHECKPOINT_DIR = DATA_DIR / 'checkpoints'
 OLD_DIR = 'old'
 
-# Output files
-ATTENDEES_JSON = 'data/all_attendees_final.json'
-ATTENDEES_CSV = 'data/csv/all_attendees_final.csv'
-ATTENDEES_WITH_DETAILS_JSON = 'data/all_attendees_with_details.json'
-ATTENDEES_WITH_DETAILS_CSV = 'data/csv/all_attendees_with_details.csv'
-ATTENDEES_ORGANIZED_CSV = 'data/csv/all_attendees_with_details_organized.csv'
+# Legacy file paths (for backwards compatibility)
+LEGACY_DATA_DIR = 'data'
+LEGACY_CSV_DIR = 'data/csv'

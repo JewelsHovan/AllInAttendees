@@ -1,0 +1,58 @@
+2025-09-11 17:00:16,113 - INFO - Loaded 2597 attendees from data/runs/2025-09-11_165917/all_attendees.json
+2025-09-11 17:00:16,113 - INFO - Starting to fetch details for 2597 attendees with 5 workers
+2025-09-11 17:00:25,345 - INFO - Progress: 50/2597 attendees processed
+2025-09-11 17:00:34,239 - INFO - Progress: 100/2597 attendees processed
+2025-09-11 17:00:42,761 - INFO - Progress: 150/2597 attendees processed
+2025-09-11 17:00:51,683 - INFO - Progress: 200/2597 attendees processed
+2025-09-11 17:01:00,219 - INFO - Progress: 250/2597 attendees processed
+2025-09-11 17:01:08,852 - INFO - Progress: 300/2597 attendees processed
+2025-09-11 17:01:17,851 - INFO - Progress: 350/2597 attendees processed
+2025-09-11 17:01:26,350 - INFO - Progress: 400/2597 attendees processed
+2025-09-11 17:01:34,801 - INFO - Progress: 450/2597 attendees processed
+2025-09-11 17:01:43,273 - INFO - Progress: 500/2597 attendees processed
+2025-09-11 17:01:52,071 - INFO - Progress: 550/2597 attendees processed
+2025-09-11 17:02:00,521 - INFO - Progress: 600/2597 attendees processed
+2025-09-11 17:02:09,446 - INFO - Progress: 650/2597 attendees processed
+2025-09-11 17:02:18,303 - INFO - Progress: 700/2597 attendees processed
+2025-09-11 17:02:26,951 - INFO - Progress: 750/2597 attendees processed
+2025-09-11 17:02:35,695 - INFO - Progress: 800/2597 attendees processed
+2025-09-11 17:02:44,226 - INFO - Progress: 850/2597 attendees processed
+2025-09-11 17:02:52,721 - INFO - Progress: 900/2597 attendees processed
+2025-09-11 17:03:01,455 - INFO - Progress: 950/2597 attendees processed
+2025-09-11 17:03:09,935 - INFO - Progress: 1000/2597 attendees processed
+2025-09-11 17:03:18,736 - INFO - Progress: 1050/2597 attendees processed
+2025-09-11 17:03:27,445 - INFO - Progress: 1100/2597 attendees processed
+2025-09-11 17:03:35,828 - INFO - Progress: 1150/2597 attendees processed
+2025-09-11 17:03:45,256 - INFO - Progress: 1200/2597 attendees processed
+2025-09-11 17:03:53,686 - INFO - Progress: 1250/2597 attendees processed
+2025-09-11 17:04:02,190 - INFO - Progress: 1300/2597 attendees processed
+2025-09-11 17:04:10,686 - INFO - Progress: 1350/2597 attendees processed
+2025-09-11 17:04:19,607 - INFO - Progress: 1400/2597 attendees processed
+2025-09-11 17:04:28,183 - INFO - Progress: 1450/2597 attendees processed
+2025-09-11 17:04:36,700 - INFO - Progress: 1500/2597 attendees processed
+2025-09-11 17:04:45,507 - INFO - Progress: 1550/2597 attendees processed
+2025-09-11 17:04:54,025 - INFO - Progress: 1600/2597 attendees processed
+2025-09-11 17:05:02,678 - INFO - Progress: 1650/2597 attendees processed
+2025-09-11 17:05:11,451 - INFO - Progress: 1700/2597 attendees processed
+2025-09-11 17:05:20,462 - INFO - Progress: 1750/2597 attendees processed
+2025-09-11 17:05:29,245 - INFO - Progress: 1800/2597 attendees processed
+2025-09-11 17:05:37,715 - INFO - Progress: 1850/2597 attendees processed
+2025-09-11 17:05:46,471 - INFO - Progress: 1900/2597 attendees processed
+2025-09-11 17:05:55,035 - INFO - Progress: 1950/2597 attendees processed
+2025-09-11 17:06:03,919 - INFO - Progress: 2000/2597 attendees processed
+2025-09-11 17:06:12,225 - INFO - Progress: 2050/2597 attendees processed
+2025-09-11 17:06:20,935 - INFO - Progress: 2100/2597 attendees processed
+2025-09-11 17:06:30,015 - INFO - Progress: 2150/2597 attendees processed
+2025-09-11 17:06:38,868 - INFO - Progress: 2200/2597 attendees processed
+2025-09-11 17:06:47,611 - INFO - Progress: 2250/2597 attendees processed
+2025-09-11 17:06:56,335 - INFO - Progress: 2300/2597 attendees processed
+2025-09-11 17:07:04,912 - INFO - Progress: 2350/2597 attendees processed
+2025-09-11 17:07:13,569 - INFO - Progress: 2400/2597 attendees processed
+2025-09-11 17:07:22,110 - INFO - Progress: 2450/2597 attendees processed
+2025-09-11 17:07:30,667 - INFO - Progress: 2500/2597 attendees processed
+2025-09-11 17:07:38,977 - INFO - Progress: 2550/2597 attendees processed
+2025-09-11 17:07:47,031 - INFO - Completed fetching details. Success: 2597, Failed: 0
+2025-09-11 17:07:47,068 - INFO - Saved 2597 attendees to data/runs/2025-09-11_165917/all_attendees_with_details.csv
+2025-09-11 17:07:47,103 - INFO - Saved to data/runs/2025-09-11_165917/all_attendees_with_details.json
+2025-09-11 17:07:47,103 - INFO - Total time: 451.0 seconds (7.5 minutes)
+2025-09-11 17:07:47,103 - INFO - Average time per attendee: 0.17 seconds
