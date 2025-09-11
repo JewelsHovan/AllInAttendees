@@ -5,7 +5,52 @@ Reorganize and rename columns in the attendees CSV for better readability
 
 import pandas as pd
 from pathlib import Path
+import unicodedata
+import re
 import config
+
+def clean_text(text):
+    """Clean text by handling French characters and special characters"""
+    if pd.isna(text) or text == '':
+        return text
+    
+    # Convert to string if not already
+    text = str(text)
+    
+    # Common French character replacements for better Excel compatibility
+    replacements = {
+        'é': 'e', 'è': 'e', 'ê': 'e', 'ë': 'e',
+        'à': 'a', 'â': 'a', 'ä': 'a',
+        'ô': 'o', 'ö': 'o',
+        'ù': 'u', 'û': 'u', 'ü': 'u',
+        'ç': 'c',
+        'î': 'i', 'ï': 'i',
+        'É': 'E', 'È': 'E', 'Ê': 'E', 'Ë': 'E',
+        'À': 'A', 'Â': 'A', 'Ä': 'A',
+        'Ô': 'O', 'Ö': 'O',
+        'Ù': 'U', 'Û': 'U', 'Ü': 'U',
+        'Ç': 'C',
+        'Î': 'I', 'Ï': 'I',
+        'œ': 'oe', 'Œ': 'OE',
+        '–': '-', '—': '-',  # Em and en dashes
+        '"': '"', '"': '"',  # Smart quotes
+        ''': "'", ''': "'",  # Smart single quotes
+        '…': '...',  # Ellipsis
+    }
+    
+    # Apply replacements
+    for old_char, new_char in replacements.items():
+        text = text.replace(old_char, new_char)
+    
+    # Remove any remaining non-ASCII characters that might cause issues
+    # This normalizes unicode and removes combining characters
+    text = unicodedata.normalize('NFKD', text)
+    text = ''.join([c for c in text if ord(c) < 128 or c.isspace()])
+    
+    # Clean up extra whitespace
+    text = ' '.join(text.split())
+    
+    return text
 
 def reorganize_csv():
     # Read the CSV
@@ -104,11 +149,22 @@ def reorganize_csv():
     # Reorder the dataframe
     df_final = df_renamed[final_column_order]
     
-    # Save the reorganized CSV
+    # Apply text cleaning to all string columns
+    print("\n🧹 Cleaning text in all columns...")
+    for col in df_final.columns:
+        if df_final[col].dtype == 'object':  # String columns
+            df_final[col] = df_final[col].apply(clean_text)
+    
+    # Save the reorganized CSV with UTF-8 BOM for better Excel compatibility
     output_path = Path(config.ATTENDEES_ORGANIZED_CSV)
-    df_final.to_csv(output_path, index=False, encoding='utf-8')
+    df_final.to_csv(output_path, index=False, encoding='utf-8-sig')
+    
+    # Also save a version without special characters for maximum compatibility
+    excel_safe_path = output_path.parent / f"{output_path.stem}_excel_safe.csv"
+    df_final.to_csv(excel_safe_path, index=False, encoding='utf-8-sig')
     
     print(f"\n✅ Reorganized CSV saved to: {output_path}")
+    print(f"✅ Excel-safe version saved to: {excel_safe_path}")
     print(f"Final columns ({len(df_final.columns)}): {list(df_final.columns)[:10]}...")
     
     # Show sample of the data
