@@ -2,5 +2,38 @@ old/
 .DS_Store
 .claude
 
-__pycache__
+__pycache__/
+*.py[cod]
+*$py.class
 
+# Virtual Environment
+env/
+venv/
+ENV/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+*.log
+data/cron.log
+
+# Personal configuration
+config_local.py
+credentials.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.bak
+~*
+
+# Keep data but you may want to exclude large datasets
+# Uncomment these if data gets too large:
+# data/runs/
+# data/checkpoints/
