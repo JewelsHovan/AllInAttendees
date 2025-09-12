@@ -1,0 +1,63 @@
+2025-09-12 17:26:30,766 - INFO - Loaded 2805 attendees from data/runs/2025-09-12_172529/all_attendees.json
+2025-09-12 17:26:30,767 - INFO - Starting to fetch details for 2805 attendees with 5 workers
+2025-09-12 17:26:39,786 - INFO - Progress: 50/2805 attendees processed
+2025-09-12 17:26:48,313 - INFO - Progress: 100/2805 attendees processed
+2025-09-12 17:26:56,655 - INFO - Progress: 150/2805 attendees processed
+2025-09-12 17:27:04,907 - INFO - Progress: 200/2805 attendees processed
+2025-09-12 17:27:13,165 - INFO - Progress: 250/2805 attendees processed
+2025-09-12 17:27:21,158 - INFO - Progress: 300/2805 attendees processed
+2025-09-12 17:27:29,345 - INFO - Progress: 350/2805 attendees processed
+2025-09-12 17:27:38,147 - INFO - Progress: 400/2805 attendees processed
+2025-09-12 17:27:46,278 - INFO - Progress: 450/2805 attendees processed
+2025-09-12 17:27:54,634 - INFO - Progress: 500/2805 attendees processed
+2025-09-12 17:28:02,658 - INFO - Progress: 550/2805 attendees processed
+2025-09-12 17:28:10,916 - INFO - Progress: 600/2805 attendees processed
+2025-09-12 17:28:19,282 - INFO - Progress: 650/2805 attendees processed
+2025-09-12 17:28:27,437 - INFO - Progress: 700/2805 attendees processed
+2025-09-12 17:28:35,468 - INFO - Progress: 750/2805 attendees processed
+2025-09-12 17:28:43,941 - INFO - Progress: 800/2805 attendees processed
+2025-09-12 17:28:52,278 - INFO - Progress: 850/2805 attendees processed
+2025-09-12 17:29:00,489 - INFO - Progress: 900/2805 attendees processed
+2025-09-12 17:29:08,558 - INFO - Progress: 950/2805 attendees processed
+2025-09-12 17:29:16,589 - INFO - Progress: 1000/2805 attendees processed
+2025-09-12 17:29:24,543 - INFO - Progress: 1050/2805 attendees processed
+2025-09-12 17:29:32,826 - INFO - Progress: 1100/2805 attendees processed
+2025-09-12 17:29:40,954 - INFO - Progress: 1150/2805 attendees processed
+2025-09-12 17:29:48,955 - INFO - Progress: 1200/2805 attendees processed
+2025-09-12 17:29:56,958 - INFO - Progress: 1250/2805 attendees processed
+2025-09-12 17:30:04,844 - INFO - Progress: 1300/2805 attendees processed
+2025-09-12 17:30:12,716 - INFO - Progress: 1350/2805 attendees processed
+2025-09-12 17:30:20,668 - INFO - Progress: 1400/2805 attendees processed
+2025-09-12 17:30:28,831 - INFO - Progress: 1450/2805 attendees processed
+2025-09-12 17:30:37,622 - INFO - Progress: 1500/2805 attendees processed
+2025-09-12 17:30:46,044 - INFO - Progress: 1550/2805 attendees processed
+2025-09-12 17:30:54,124 - INFO - Progress: 1600/2805 attendees processed
+2025-09-12 17:31:02,273 - INFO - Progress: 1650/2805 attendees processed
+2025-09-12 17:31:10,247 - INFO - Progress: 1700/2805 attendees processed
+2025-09-12 17:31:18,589 - INFO - Progress: 1750/2805 attendees processed
+2025-09-12 17:31:26,876 - INFO - Progress: 1800/2805 attendees processed
+2025-09-12 17:31:35,345 - INFO - Progress: 1850/2805 attendees processed
+2025-09-12 17:31:43,624 - INFO - Progress: 1900/2805 attendees processed
+2025-09-12 17:31:51,735 - INFO - Progress: 1950/2805 attendees processed
+2025-09-12 17:31:59,888 - INFO - Progress: 2000/2805 attendees processed
+2025-09-12 17:32:08,096 - INFO - Progress: 2050/2805 attendees processed
+2025-09-12 17:32:16,478 - INFO - Progress: 2100/2805 attendees processed
+2025-09-12 17:32:24,622 - INFO - Progress: 2150/2805 attendees processed
+2025-09-12 17:32:32,613 - INFO - Progress: 2200/2805 attendees processed
+2025-09-12 17:32:40,673 - INFO - Progress: 2250/2805 attendees processed
+2025-09-12 17:32:48,771 - INFO - Progress: 2300/2805 attendees processed
+2025-09-12 17:32:56,763 - INFO - Progress: 2350/2805 attendees processed
+2025-09-12 17:33:04,627 - INFO - Progress: 2400/2805 attendees processed
+2025-09-12 17:33:12,809 - INFO - Progress: 2450/2805 attendees processed
+2025-09-12 17:33:21,010 - INFO - Progress: 2500/2805 attendees processed
+2025-09-12 17:33:29,122 - INFO - Progress: 2550/2805 attendees processed
+2025-09-12 17:33:37,596 - INFO - Progress: 2600/2805 attendees processed
+2025-09-12 17:33:45,780 - INFO - Progress: 2650/2805 attendees processed
+2025-09-12 17:33:53,873 - INFO - Progress: 2700/2805 attendees processed
+2025-09-12 17:34:01,978 - INFO - Progress: 2750/2805 attendees processed
+2025-09-12 17:34:10,002 - INFO - Progress: 2800/2805 attendees processed
+2025-09-12 17:34:10,766 - INFO - Completed fetching details. Success: 2805, Failed: 0
+2025-09-12 17:34:10,809 - INFO - Saved 2805 attendees to data/runs/2025-09-12_172529/all_attendees_with_details.csv
+2025-09-12 17:34:10,846 - INFO - Saved to data/runs/2025-09-12_172529/all_attendees_with_details.json
+2025-09-12 17:34:10,849 - INFO - Total time: 460.1 seconds (7.7 minutes)
+2025-09-12 17:34:10,849 - INFO - Average time per attendee: 0.16 seconds
