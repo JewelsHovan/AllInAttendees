@@ -178,6 +178,20 @@ echo ""
 echo -e "${BLUE}File sizes:${NC}"
 ls -lh "${RUN_DIR}"/*.{json,csv} 2>/dev/null | awk '{print "  • " $9 ": " $5}'
 
+# Sync to database
+echo ""
+echo -e "${YELLOW}Step 4/4: Syncing to PostgreSQL database...${NC}"
+if python3 "${SCRIPT_DIR}/database/sync_to_db.py" > "${LOGS_DIR}/database_sync.log" 2>&1; then
+    echo -e "${GREEN}✓ Database sync completed successfully${NC}"
+    # Show summary from database sync log
+    if grep -q "Total attendees:" "${LOGS_DIR}/database_sync.log" 2>/dev/null; then
+        grep "Total attendees:" "${LOGS_DIR}/database_sync.log" | tail -1
+    fi
+else
+    echo -e "${RED}⚠️  Database sync failed (check ${LOGS_DIR}/database_sync.log)${NC}"
+    echo -e "${YELLOW}Data collection completed but database not updated${NC}"
+fi
+
 # Optional: Clean up old runs (keep last 30 days)
 if [ "${CLEANUP_OLD_RUNS:-false}" = "true" ]; then
     echo ""

@@ -11,15 +11,19 @@ def create_bar_chart(df: pd.DataFrame, title: str,
                      x_label: str = "Count", y_label: str = "Category",
                      color_scale: str = "Blues") -> go.Figure:
     """Create a horizontal bar chart"""
+    # Handle both uppercase and lowercase column names
+    x_col = 'Count' if 'Count' in df.columns else 'count'
+    y_col = 'Value' if 'Value' in df.columns else 'value'
+    
     fig = px.bar(
         df, 
-        x='Count', 
-        y='Value',
+        x=x_col, 
+        y=y_col,
         orientation='h',
         title=title,
-        labels={'Count': x_label, 'Value': y_label},
-        text='Count',
-        color='Count',
+        labels={x_col: x_label, y_col: y_label},
+        text=x_col,
+        color=x_col,
         color_continuous_scale=color_scale
     )
     
@@ -35,10 +39,14 @@ def create_bar_chart(df: pd.DataFrame, title: str,
 
 def create_pie_chart(df: pd.DataFrame, title: str) -> go.Figure:
     """Create a pie chart"""
+    # Handle both uppercase and lowercase column names
+    values_col = 'Count' if 'Count' in df.columns else 'count'
+    names_col = 'Value' if 'Value' in df.columns else 'value'
+    
     fig = px.pie(
         df, 
-        values='Count', 
-        names='Value',
+        values=values_col, 
+        names=names_col,
         title=title
     )
     
@@ -81,10 +89,14 @@ def create_donut_chart(values: list, labels: list, title: str) -> go.Figure:
 
 def create_treemap(df: pd.DataFrame, title: str) -> go.Figure:
     """Create a treemap visualization"""
+    # Handle both uppercase and lowercase column names
+    path_col = 'Value' if 'Value' in df.columns else 'value'
+    values_col = 'Count' if 'Count' in df.columns else 'count'
+    
     fig = px.treemap(
         df,
-        path=['Value'],
-        values='Count',
+        path=[path_col],
+        values=values_col,
         title=title
     )
     
@@ -160,9 +172,9 @@ def create_interests_wordcloud_data(df: pd.DataFrame) -> pd.DataFrame:
     interest_counts = pd.Series(all_interests).value_counts().head(30)
     
     return pd.DataFrame({
-        'Value': interest_counts.index,
-        'Count': interest_counts.values,
-        'Percentage': (interest_counts.values / len(df) * 100).round(2)
+        'value': interest_counts.index,  # Use lowercase for consistency
+        'count': interest_counts.values,
+        'percentage': (interest_counts.values / len(df) * 100).round(2)
     })
 
 def create_metric_card(title: str, value: str, delta: Optional[str] = None) -> str:

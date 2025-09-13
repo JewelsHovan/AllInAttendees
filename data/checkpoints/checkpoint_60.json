@@ -1801,6 +1801,236 @@
       "userId": "VXNlcl8xMTA4NTcxMg=="
     },
     {
+      "id": "RXZlbnRQZW9wbGVfNDE3MzQ2NTA=",
+      "firstName": "Dominic",
+      "lastName": "Marchand",
+      "jobTitle": "Chef de produit, Cellule IA",
+      "organization": "CBC/Radio-Canada",
+      "photoUrl": "https://static.swapcard.com/public/images/62c22f35fe1148d0a5f5f20e69421b7f.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yMDk3NTU0NQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MzQ=",
+      "firstName": "Steven",
+      "lastName": "Wang",
+      "jobTitle": "Chief Executive Officer",
+      "organization": "Venture for Canada",
+      "photoUrl": "https://static.swapcard.com/public/images/a8b40f89f2d34aeca8fc54e9e346b3d1.png",
+      "biography": null,
+      "userId": "VXNlcl8yNTA0NzEzNw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4Mjk=",
+      "firstName": "Stephanie",
+      "lastName": "Bouzar",
+      "jobTitle": "Director, Data Product",
+      "organization": "Air Canada",
+      "photoUrl": "https://cdn-api.swapcard.com/public/images/a80603a634c64c54a10c1d424cf368c1.png",
+      "biography": null,
+      "userId": "VXNlcl8xMzk2MTM4NA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MjY=",
+      "firstName": "Georges",
+      "lastName": "Aczam",
+      "jobTitle": "CEO",
+      "organization": "AquaVerti Farms",
+      "photoUrl": "https://cdn-api.swapcard.com/public/images/759389112e8f472fb0afada6e909dee0.png",
+      "biography": null,
+      "userId": "VXNlcl8xNDI3OTYyMQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MjM=",
+      "firstName": "Patrick",
+      "lastName": "Tessier",
+      "jobTitle": "Head of Data & Analytics",
+      "organization": "Bombardier",
+      "photoUrl": "https://cdn-api.swapcard.com/public/images/05214c7378f94fb29cfa0bbd1f6d5eb7.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8xNDM0NTgy"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MjE=",
+      "firstName": "Brigitte",
+      "lastName": "Lariviere",
+      "jobTitle": "CIO",
+      "organization": "Bombardier",
+      "photoUrl": "https://cdn-api.swapcard.com/public/images/d08da13b035d63e3ae100dcfcba6f9b5e23415cd.jpeg",
+      "biography": null,
+      "userId": "VXNlcl82Mjc5MTc="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTg=",
+      "firstName": "Edmond",
+      "lastName": "Samaha",
+      "jobTitle": "Technical Specialist",
+      "organization": "IBM Canada",
+      "photoUrl": "https://static.swapcard.com/public/images/56f1277672c44d24a756a21ece2afcf1.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUxNg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTc=",
+      "firstName": "Jared",
+      "lastName": "Killoran",
+      "jobTitle": "Account Technical Leader",
+      "organization": "IBM Canada",
+      "photoUrl": "https://static.swapcard.com/public/images/52ab2448061d449db4d321aa6bc7ec83.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUxNw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTM=",
+      "firstName": "Rowena",
+      "lastName": "Roy",
+      "jobTitle": "Principal Technology Sales Leader",
+      "organization": "IBM Canada",
+      "photoUrl": "https://cdn-api.swapcard.com/public/images/d2da2def8ebe4a899c38a337214c0436.png",
+      "biography": null,
+      "userId": "VXNlcl8xMDU0MDQ1Mg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTI=",
+      "firstName": "Reine",
+      "lastName": "Karam",
+      "jobTitle": "Technology Seller Representative",
+      "organization": "IBM Canada",
+      "photoUrl": "https://cdn-api.swapcard.com/public/images/d5f194ff41704ca48024985bb35df6ae.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8xMzk0ODIxNw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTE=",
+      "firstName": "Alexandre",
+      "lastName": "Caron",
+      "jobTitle": "Directeur Innovation",
+      "organization": "PME MTL Centre-Ouest",
+      "photoUrl": "https://static.swapcard.com/public/images/f7bfefcb568e41aca71430a91572c7d4.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8xOTU1MzAyMg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODk=",
+      "firstName": "Caroline",
+      "lastName": "Santos",
+      "jobTitle": "Director, Strategic AI Integration and Data Management",
+      "organization": "Concordia University",
+      "photoUrl": "https://static.swapcard.com/public/images/97857939bc2a4bd8b60540595fbd3f6f.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUxMg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODc=",
+      "firstName": "Ada",
+      "lastName": "Panduro",
+      "jobTitle": "Directrice Innovation",
+      "organization": "PME MTL Centre-Ouest",
+      "photoUrl": "https://static.swapcard.com/public/images/de7cb7cb9e404575a36e0675d861dc46.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNDEwNTc2NA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODI=",
+      "firstName": "Sven",
+      "lastName": "Buridans",
+      "jobTitle": "Directeur de l'innovation et des partenariats numériques",
+      "organization": "Fédération culturelle canadienne-française",
+      "photoUrl": "https://static.swapcard.com/public/images/2792bee7a6394e329dfc20d6c86dfe84.jpeg",
+      "biography": null,
+      "userId": "VXNlcl85NzUwOTcy"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODE=",
+      "firstName": "Tiana",
+      "lastName": "Wang",
+      "jobTitle": "Product Manager",
+      "organization": "Deloitte",
+      "photoUrl": "https://static.swapcard.com/public/images/0a8b1adebfec4904a78f33bfaf396aed.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUwOA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODA=",
+      "firstName": "Jon",
+      "lastName": "Druker",
+      "jobTitle": "Directeur Innovation",
+      "organization": "PME MTL Ouest-de-l'Île",
+      "photoUrl": "https://static.swapcard.com/public/images/9bf19ef31b5648de888003728a10d2e2.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNDQ3OTQ5Ng=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3Nzk=",
+      "firstName": "Omar",
+      "lastName": "Montaz",
+      "jobTitle": "Directeur Innovation",
+      "organization": "PME MTL Centre-Ville",
+      "photoUrl": "https://static.swapcard.com/public/images/5b6c97f84dca427c94f75381e3dd96f3.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8xOTYxMTAzNA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3Nzg=",
+      "firstName": "Mehdi",
+      "lastName": "Merai",
+      "jobTitle": "CEO",
+      "organization": "JetScale AI",
+      "photoUrl": "https://static.swapcard.com/public/images/0fd7b2cbaef54132a2fb0350cccc9566.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUwNw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3Njk=",
+      "firstName": "Francis",
+      "lastName": "Perron",
+      "jobTitle": "Co-founder",
+      "organization": "Trinary",
+      "photoUrl": "https://static.swapcard.com/public/images/961b7a9ccb8243ff8f2bf6b21f5e593b.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yMDk2OTU4NQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NjI=",
+      "firstName": "Amelie Roy Fortin",
+      "lastName": "Roy Fortin",
+      "jobTitle": "Directrice du Développement des Affaires",
+      "organization": "NUMANA",
+      "photoUrl": "https://static.swapcard.com/public/images/710af51063bc4a868f08c695e7f43312.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yMzUyNjg4Mg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NTY=",
+      "firstName": "Jean Luc",
+      "lastName": "Sanscartier",
+      "jobTitle": "VP Data & AI Adoption",
+      "organization": "SBI - Data, AI & EPM",
+      "photoUrl": "https://static.swapcard.com/public/images/2ac0d27ffa244f3c936deabf6a5f7370.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8xNDUyOTA0NQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NTQ=",
+      "firstName": "Michel",
+      "lastName": "Bourque",
+      "jobTitle": "CEO - COFONDATEUR",
+      "organization": "Cyberdefense AI",
+      "photoUrl": "https://static.swapcard.com/public/images/f0585f4c3c3643b09d61bbdacfa98cfa.png",
+      "biography": null,
+      "userId": "VXNlcl80NTUxMTY1"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NTI=",
+      "firstName": "Jeremy",
+      "lastName": "Uhl",
+      "jobTitle": "Gestionnaire de comptes",
+      "organization": "Solution BI Canada Inc",
+      "photoUrl": "https://static.swapcard.com/public/images/c6f5f1659f72403a9a17afb03a6e901a.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNDY1NjE5Mw=="
+    },
+    {
       "id": "RXZlbnRQZW9wbGVfNDE3MjQxOTM=",
       "firstName": "Denis",
       "lastName": "KESERIS",
@@ -1899,6 +2129,16 @@
       "photoUrl": "https://static.swapcard.com/public/images/249b7398f80b401d8aa24a0435ef49ea.png",
       "biography": null,
       "userId": "VXNlcl8xODgxNTE1"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjA4NzE=",
+      "firstName": "Kris",
+      "lastName": "KRÜG",
+      "jobTitle": "Founder and CEO",
+      "organization": "BC + AI Ecosystem Association",
+      "photoUrl": "https://static.swapcard.com/public/images/5bf0713ae53343e1acaa2d0df1dd611e.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNTc2MzU5NQ=="
     },
     {
       "id": "RXZlbnRQZW9wbGVfNDE3MjA3MDM=",
@@ -2014,7 +2254,7 @@
       "id": "RXZlbnRQZW9wbGVfNDE3MTU0NDY=",
       "firstName": "Michelson",
       "lastName": "Chery",
-      "jobTitle": "Architecte de solutions",
+      "jobTitle": "Solution Architect",
       "organization": "Leaseweb",
       "photoUrl": "https://cdn-api.swapcard.com/public/images/cb3d49aef7ce45219df74a7c5bb259a8.jpeg",
       "biography": null,
@@ -2962,8 +3202,8 @@
     },
     {
       "id": "RXZlbnRQZW9wbGVfNDE2MDg3MzI=",
-      "firstName": "Tarak",
-      "lastName": "Bouattour",
+      "firstName": "TARAK",
+      "lastName": "BOUATTOUR",
       "jobTitle": "CEO",
       "organization": "TAWASOL TECHNOLOGY",
       "photoUrl": "https://cdn-api.swapcard.com/public/images/343ed69841384bd1a7c1ddb83e019c65.jpg",
@@ -6756,7 +6996,7 @@
       "lastName": "Anzarut",
       "jobTitle": "Field Marketing Manager, Data AI and Automation",
       "organization": "IBM Cabada",
-      "photoUrl": "https://static.swapcard.com/public/images/286b630aa1874dfb962af76f5cc3d8bc.jpeg",
+      "photoUrl": "https://static.swapcard.com/public/images/3b897b65fbec40c88aded573889f29af.jpeg",
       "biography": null,
       "userId": "VXNlcl81Mjc2OTcz"
     },
@@ -7671,6 +7911,16 @@
       "userId": "VXNlcl8yNTEzMDc4Ng=="
     },
     {
+      "id": "RXZlbnRQZW9wbGVfNDA1MDI0ODg=",
+      "firstName": "Vincent",
+      "lastName": "Fraser",
+      "jobTitle": "Président et chef de la direction",
+      "organization": "Croesus",
+      "photoUrl": "https://static.swapcard.com/public/images/b182636f4b0947d3a20809a6da1992ca.png",
+      "biography": null,
+      "userId": "VXNlcl8yNTEyOTgzMQ=="
+    },
+    {
       "id": "RXZlbnRQZW9wbGVfNDA0Nzk3MDE=",
       "firstName": "Louis-Pierre",
       "lastName": "Gravelle",
@@ -7942,9 +8192,9 @@
     },
     {
       "id": "RXZlbnRQZW9wbGVfNDA0MTgzODg=",
-      "firstName": "Irene",
+      "firstName": "Irene Rose",
       "lastName": "Saliendra",
-      "jobTitle": "Chief Executive Officer",
+      "jobTitle": "CEO",
       "organization": "Fem Entity",
       "photoUrl": "https://static.swapcard.com/public/images/cbdc7736d3f448238d09c10bbfe2f365.jpeg",
       "biography": null,
@@ -8015,7 +8265,7 @@
       "firstName": "Kip",
       "lastName": "Warner",
       "jobTitle": "Founder",
-      "organization": "CARTESIAN THEATRE CORP.",
+      "organization": "Cartesian Theatre Corp",
       "photoUrl": "https://static.swapcard.com/public/images/8f2cf7207df0464abf2590147435039b.jpeg",
       "biography": null,
       "userId": "VXNlcl8yNDEwNzE4Ng=="
@@ -8105,7 +8355,7 @@
       "firstName": "Sebastien",
       "lastName": "Delorme",
       "jobTitle": "CTO",
-      "organization": "Scopia Tech",
+      "organization": "Scopia Surgical",
       "photoUrl": "https://static.swapcard.com/public/images/f9f3db659d27445aa36720639f08df42.jpeg",
       "biography": null,
       "userId": "VXNlcl8yNTA4NjE5Ng=="
@@ -8482,9 +8732,9 @@
     },
     {
       "id": "RXZlbnRQZW9wbGVfNDA0MTg2ODM=",
-      "firstName": "Louis Philippe",
-      "lastName": "Dea",
-      "jobTitle": "Président",
+      "firstName": "Employe Nom A Venir",
+      "lastName": "Employe Nom A Venir",
+      "jobTitle": "Spécialiste marketing",
       "organization": "Effet Cumulatif",
       "photoUrl": "https://static.swapcard.com/public/images/1a7579494e41490f84ac48673a6aa371.jpeg",
       "biography": null,
@@ -8684,8 +8934,8 @@
       "id": "RXZlbnRQZW9wbGVfNDA0MTg1OTg=",
       "firstName": "Mary",
       "lastName": "Tse",
-      "jobTitle": "Business Development Executive in Sales",
-      "organization": "eStruxture Data center",
+      "jobTitle": "Business Development Executive",
+      "organization": "eStruxture Data Centers",
       "photoUrl": "https://static.swapcard.com/public/images/9674df3757974728950fb942ae574db4.jpeg",
       "biography": null,
       "userId": "VXNlcl82MTA4MTE5"
@@ -9524,7 +9774,7 @@
       "id": "RXZlbnRQZW9wbGVfNDEzMzk3Njc=",
       "firstName": "Claudine",
       "lastName": "Lagace",
-      "jobTitle": "Directrice principale",
+      "jobTitle": "Directrice principale-Données-PRP-Intelligence artificielle responsable",
       "organization": "Banque Nationale",
       "photoUrl": null,
       "biography": null,
@@ -10264,7 +10514,7 @@
       "id": "RXZlbnRQZW9wbGVfNDEzMjAwOTI=",
       "firstName": "Jenni",
       "lastName": "TROUTMAN",
-      "jobTitle": "Public Relations MAnager",
+      "jobTitle": "Director of Training and Certification Products and Services at Amazon Web Services (AWS)",
       "organization": "Amazon Web Services",
       "photoUrl": null,
       "biography": null,
@@ -10459,6 +10709,16 @@
       "photoUrl": null,
       "biography": null,
       "userId": "VXNlcl8xNzc3NzQ0MA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDEzMTY0MDE=",
+      "firstName": "Ryan",
+      "lastName": "Barkwell",
+      "jobTitle": "AI Solution Sales Specialist",
+      "organization": "NetApp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTU0MzQ2NQ=="
     },
     {
       "id": "RXZlbnRQZW9wbGVfNDEzMTU3Njk=",
@@ -13074,7 +13334,7 @@
       "id": "RXZlbnRQZW9wbGVfNDEwNzQ1MDk=",
       "firstName": "Brian",
       "lastName": "Boyle",
-      "jobTitle": "VP Tech",
+      "jobTitle": "VP Operations",
       "organization": "Channel Zero",
       "photoUrl": null,
       "biography": null,
@@ -13209,6 +13469,856 @@
       "photoUrl": null,
       "biography": null,
       "userId": "VXNlcl8yNTM4MTE2Nw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MzkwOTY=",
+      "firstName": "Eric",
+      "lastName": "Blondin",
+      "jobTitle": "Head of Business Technology",
+      "organization": "SimpleFi Solutions",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc3NTc2NQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MzQ2NTY=",
+      "firstName": "Alex",
+      "lastName": "Little",
+      "jobTitle": "Senior Manager",
+      "organization": "Deloitte",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc3Mjg5Mg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MzQ2NTU=",
+      "firstName": "Emile",
+      "lastName": "Allaire Cote",
+      "jobTitle": "Conseiller contrôle",
+      "organization": "Hydro-Québec",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc3Mjg5MQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MzQ2NTQ=",
+      "firstName": "Olivier",
+      "lastName": "Fournier",
+      "jobTitle": "Conseiller en affaires internationales et intelligence artificielle",
+      "organization": "Ministère des Relations internationales et de la Francophonie (Gouvernement du Québec)",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc3Mjg5MA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MzQ2NTM=",
+      "firstName": "Zen",
+      "lastName": "Kamiji",
+      "jobTitle": "Project Coordinator",
+      "organization": "JETRO Toronto",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl83MDg1MDIw"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MzQ2NTI=",
+      "firstName": "Peter",
+      "lastName": "Alexiou",
+      "jobTitle": "Senior Director, Canada Presales",
+      "organization": "Dell",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc3Mjg4OQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MzQ2NTE=",
+      "firstName": "Anne Marie",
+      "lastName": "Faber",
+      "jobTitle": "VP Exécutive",
+      "organization": "Cybereco",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yMzk4MzUxNA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MzQ2NDk=",
+      "firstName": "Alex",
+      "lastName": "Shee",
+      "jobTitle": "Entrepreneur in Residence",
+      "organization": "MILA",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc3Mjg4OA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjY4NjM=",
+      "firstName": "Samuel",
+      "lastName": "Rasetti",
+      "jobTitle": "Tableau Developper",
+      "organization": "Bath Fitter",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl82OTg1OTYw"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4NDk=",
+      "firstName": "Kris",
+      "lastName": "Constable",
+      "jobTitle": "Founder/CEO",
+      "organization": "Petrichor Labs",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU1OQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4NDg=",
+      "firstName": "Myriam",
+      "lastName": "Cote",
+      "jobTitle": "consultante",
+      "organization": "maiia",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl81MzcxODA3"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4NDc=",
+      "firstName": "Chi",
+      "lastName": "Le",
+      "jobTitle": "Founder",
+      "organization": "Marble Mountain",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU1OA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4NDU=",
+      "firstName": "Joey",
+      "lastName": "Orlando",
+      "jobTitle": "Founding Engineer",
+      "organization": "Archestra.ai",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU1Ng=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4NDQ=",
+      "firstName": "Alexandra",
+      "lastName": "Daoud",
+      "jobTitle": "Vice-Chair",
+      "organization": "Quantum Industry Canada (QIC)",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU1NA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4NDM=",
+      "firstName": "Cory",
+      "lastName": "Brandolini",
+      "jobTitle": "CEO",
+      "organization": "Railtown AI Technologies",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU1NQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4NDI=",
+      "firstName": "Sasan",
+      "lastName": "Iranpour",
+      "jobTitle": "CEO and Founder",
+      "organization": "PACK Skill",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU1Mw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4NDE=",
+      "firstName": "Abdullah",
+      "lastName": "Hassan",
+      "jobTitle": "Founder/CEO",
+      "organization": "siy.ai",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU1Mg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4NDA=",
+      "firstName": "Sadek",
+      "lastName": "Hamdan",
+      "jobTitle": "Chief data officer",
+      "organization": "IoT-world",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU1MQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4Mzk=",
+      "firstName": "Ali",
+      "lastName": "Abuelmagd",
+      "jobTitle": "Board Member",
+      "organization": "siy.ai",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU1MA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4Mzg=",
+      "firstName": "Harshmeet",
+      "lastName": "Arora",
+      "jobTitle": "Core Advisor",
+      "organization": "Reppo Labs",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU0OQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4Mzc=",
+      "firstName": "Warren",
+      "lastName": "Law",
+      "jobTitle": "CEO",
+      "organization": "Galapagos Technologies Incorporated",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU0OA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MzY=",
+      "firstName": "Nick",
+      "lastName": "Westerveld",
+      "jobTitle": "Mgr - Info Systems  Engineering",
+      "organization": "TMMC - Toyota Motor Manufacturing Canada Inc.",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU0Nw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MzU=",
+      "firstName": "STEPHANE",
+      "lastName": "BRISEBOIS",
+      "jobTitle": "DESIGN AUTOMATION SPECIALIST",
+      "organization": "BMG5 TECHNOLOGIES INC.",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU0Ng=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MzM=",
+      "firstName": "Mathieu",
+      "lastName": "Derome",
+      "jobTitle": "CDAO",
+      "organization": "Desjardins",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU0NA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MzI=",
+      "firstName": "Alex",
+      "lastName": "Creteanu",
+      "jobTitle": "Chef, Technologies de l'information",
+      "organization": "GMR Safety Inc.",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU0Mw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MzE=",
+      "firstName": "Joey",
+      "lastName": "Jette",
+      "jobTitle": "Chef, Service et Installations Amérique",
+      "organization": "GMR Safety Inc.",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU0NQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MzA=",
+      "firstName": "Talal",
+      "lastName": "El Moutarajji",
+      "jobTitle": "Director of Digital Transformation",
+      "organization": "Bell Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl81MjQ0OTU2"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4Mjg=",
+      "firstName": "Maya",
+      "lastName": "Rozanes",
+      "jobTitle": "Sr Manager, Growth Marketing",
+      "organization": "Dialogue Health Technologies",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU0MQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4Mjc=",
+      "firstName": "Victoire",
+      "lastName": "Gekas",
+      "jobTitle": "Sr Manager, Strategy",
+      "organization": "Dialogue Health Technologies",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU0Mg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MjU=",
+      "firstName": "Alexis",
+      "lastName": "Grenon",
+      "jobTitle": "Stratège marketing numérique",
+      "organization": "Nexapp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjU0MA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MjQ=",
+      "firstName": "Patrice",
+      "lastName": "Ethier",
+      "jobTitle": "Sr Director of IT - Enterprise Applications",
+      "organization": "Saputo",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUzOQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MjI=",
+      "firstName": "Jean Pierre",
+      "lastName": "Francoeur",
+      "jobTitle": "Director of IT",
+      "organization": "Keurig Dr. Pepper",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUzOA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MjA=",
+      "firstName": "Cristina",
+      "lastName": "Cistellini",
+      "jobTitle": "VP Evolution et Livraison et Performance Humaine",
+      "organization": "BNC",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUzNw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MTk=",
+      "firstName": "Antonio",
+      "lastName": "Albeshelani",
+      "jobTitle": "VP of IT",
+      "organization": "PSL Group",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8xMTczNzM2Mg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MTg=",
+      "firstName": "Karim",
+      "lastName": "Yousni",
+      "jobTitle": "Director, Client Engineering, IBM Technology, Canada",
+      "organization": "IBM Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUzNQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MTc=",
+      "firstName": "Domenic",
+      "lastName": "Fusco",
+      "jobTitle": "Director, Systems Engineering",
+      "organization": "Pure Storage Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUzNg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MTY=",
+      "firstName": "Nassim",
+      "lastName": "Tayari",
+      "jobTitle": "Data and AI Platform Leader, Technical Sales, IBM Technology",
+      "organization": "IBM Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yMDU2MDYyMQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MTU=",
+      "firstName": "Gloria",
+      "lastName": "Chan",
+      "jobTitle": "Data Brand Seller",
+      "organization": "IBM Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUzNA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MTQ=",
+      "firstName": "Rachel",
+      "lastName": "Taylor",
+      "jobTitle": "Client Executive",
+      "organization": "NetApp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUzMw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MTM=",
+      "firstName": "James",
+      "lastName": "Marsh",
+      "jobTitle": "Solution Engineer",
+      "organization": "NetApp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUzMQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MTI=",
+      "firstName": "David",
+      "lastName": "Beauchamp",
+      "jobTitle": "Partner Manager",
+      "organization": "NetApp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUzMg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MTE=",
+      "firstName": "Danny",
+      "lastName": "Silvermount",
+      "jobTitle": "Commercial Sales Director",
+      "organization": "NetApp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUzMA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MTA=",
+      "firstName": "Marc",
+      "lastName": "St Onge",
+      "jobTitle": "Solution Engineer",
+      "organization": "NetApp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUyOQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MDk=",
+      "firstName": "Adel",
+      "lastName": "Djoudi",
+      "jobTitle": "Client Executive",
+      "organization": "NetApp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUyOA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MDg=",
+      "firstName": "Carmine",
+      "lastName": "Marotta",
+      "jobTitle": "Senior Client Executive, Interim Enterprise Central Sales Director",
+      "organization": "NetApp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUyNw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MDc=",
+      "firstName": "Nathalie",
+      "lastName": "Tasso",
+      "jobTitle": "Senior Manager Cloud Services & Finance",
+      "organization": "WSP",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUyNg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MDY=",
+      "firstName": "Stamatis",
+      "lastName": "Frangeskaki",
+      "jobTitle": "Client Executive",
+      "organization": "NetApp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUyNQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MDU=",
+      "firstName": "Guy",
+      "lastName": "St Pierre",
+      "jobTitle": "Client Executive",
+      "organization": "NetApp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUyNA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MDQ=",
+      "firstName": "Chris",
+      "lastName": "Green",
+      "jobTitle": "Solution Engineer",
+      "organization": "NetApp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUyMw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MDM=",
+      "firstName": "Nicholas",
+      "lastName": "Chin",
+      "jobTitle": "Senior I&IT Project Manager, Product and Data Management",
+      "organization": "Government of Ontario",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUyMg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MDI=",
+      "firstName": "Francois",
+      "lastName": "Gagnon",
+      "jobTitle": "Enterprise Architect",
+      "organization": "WSP",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUyMA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MDE=",
+      "firstName": "Patrice",
+      "lastName": "Noel",
+      "jobTitle": "Client Executive",
+      "organization": "NetApp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUyMQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MDA=",
+      "firstName": "Tim",
+      "lastName": "Leonard",
+      "jobTitle": "Senior Manager Infrastructure Delivery",
+      "organization": "Government of Ontario",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUxOQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTk=",
+      "firstName": "Rocco",
+      "lastName": "Passero",
+      "jobTitle": "Chief Information Officer/Assistant Deputy Minister - Community Services I&IT Cluster",
+      "organization": "Government of Ontario",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUxOA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTY=",
+      "firstName": "Craig",
+      "lastName": "Mc Lellan",
+      "jobTitle": "CEO, Founder",
+      "organization": "ThinkOn",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8zNzA5NDk3"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTU=",
+      "firstName": "Mohab",
+      "lastName": "El Hilaly",
+      "jobTitle": "Partner - AI and Automation Canada Lead",
+      "organization": "IBM Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUxNA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTQ=",
+      "firstName": "David",
+      "lastName": "Luckanuck",
+      "jobTitle": "Client Executive",
+      "organization": "NetApp",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUxNQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTA=",
+      "firstName": "Marcus",
+      "lastName": "Pratt",
+      "jobTitle": "Strategic Account Director",
+      "organization": "NVIDIA",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUxMw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODg=",
+      "firstName": "Ebenezer",
+      "lastName": "Arthur",
+      "jobTitle": "Venture Partner",
+      "organization": "BKR Capital",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUxMQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODY=",
+      "firstName": "Peter",
+      "lastName": "Mc Kay",
+      "jobTitle": "IBM Technology Sales Leader",
+      "organization": "IBM Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl81NDc0MDA3"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODU=",
+      "firstName": "Fadi",
+      "lastName": "Albatal",
+      "jobTitle": "CSO",
+      "organization": "Innovobot",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8xNDM1OTU2"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODQ=",
+      "firstName": "Gabriel",
+      "lastName": "De Lisi",
+      "jobTitle": "CTO",
+      "organization": "JetScale AI",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUxMA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODM=",
+      "firstName": "Simon",
+      "lastName": "Mallet",
+      "jobTitle": "Chef développeur Cellule IA",
+      "organization": "Radio-Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUwOQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3Nzc=",
+      "firstName": "Sebastien",
+      "lastName": "Bedard",
+      "jobTitle": "Architecte d’entreprise",
+      "organization": "iA Groupe Financier",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUwNg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NzY=",
+      "firstName": "Pedro",
+      "lastName": "Gregorio",
+      "jobTitle": "Head of Robotics Lab / Chef de laboratoire, Robotique",
+      "organization": "Innovobot",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUwNQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NzU=",
+      "firstName": "Simona",
+      "lastName": "Gandrabur",
+      "jobTitle": "Head of AI Safety Studio",
+      "organization": "Mila",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUwMw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NzQ=",
+      "firstName": "Karl",
+      "lastName": "Johnson",
+      "jobTitle": "CEO",
+      "organization": "Trinary",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUwNA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NzM=",
+      "firstName": "Federico",
+      "lastName": "Pensa",
+      "jobTitle": "VP of Technology",
+      "organization": "Fayolle Construction Inc",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUwMg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NzI=",
+      "firstName": "Frederic",
+      "lastName": "Chanay",
+      "jobTitle": "VP, AI Solutions & Technologies",
+      "organization": "Mila",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yMDk2ODk4NA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NzE=",
+      "firstName": "Elizabeth",
+      "lastName": "Heurtelou",
+      "jobTitle": "Senior Director, Distribution and Partnerships",
+      "organization": "CBC Radio-Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUwMA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NzA=",
+      "firstName": "Marc",
+      "lastName": "ANTOINE",
+      "jobTitle": "Directeur des affaires publiques",
+      "organization": "Safran.AI",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUwMQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3Njg=",
+      "firstName": "ROXANE",
+      "lastName": "TRUDEAU",
+      "jobTitle": "Chef d'équipe - Marketing Relationnel",
+      "organization": "Radio-Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjQ5OQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3Njc=",
+      "firstName": "Etienne",
+      "lastName": "Moreau",
+      "jobTitle": "Directeur de Comptes",
+      "organization": "SBI Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjQ5OA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NjY=",
+      "firstName": "Jim",
+      "lastName": "Black",
+      "jobTitle": "Vice President",
+      "organization": "Porter Novelli",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjQ5Nw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NjU=",
+      "firstName": "Duke",
+      "lastName": "Chung",
+      "jobTitle": "Director, BI/Analytics",
+      "organization": "McKesson Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yMDg5ODQ2MA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NjQ=",
+      "firstName": "Jean Luc",
+      "lastName": "Pellerin",
+      "jobTitle": "Conseiller aux Startups Fintech",
+      "organization": "La Station Fintech Montreal",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjQ5Ng=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NjM=",
+      "firstName": "Dan",
+      "lastName": "Lord",
+      "jobTitle": "Head of Business Development",
+      "organization": "SBI",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjQ5NQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NjE=",
+      "firstName": "Darlene",
+      "lastName": "Demchuk",
+      "jobTitle": "Senior Director, Systems",
+      "organization": "McKesson Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yMDkzNjg4NQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NjA=",
+      "firstName": "Samir",
+      "lastName": "Haddad",
+      "jobTitle": "Lead Data Scientist",
+      "organization": "McKesson Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjQ5NA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NTk=",
+      "firstName": "Victoria",
+      "lastName": "Mc Keown",
+      "jobTitle": "Lead Data Scientist",
+      "organization": "McKesson Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjQ5Mw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NTg=",
+      "firstName": "Julie",
+      "lastName": "Trudeau",
+      "jobTitle": "VP",
+      "organization": "Kairos",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8xMDAxNzY0Mg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NTc=",
+      "firstName": "Maelle",
+      "lastName": "Lachance",
+      "jobTitle": "Student",
+      "organization": "UQAM",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjQ5Mg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NTU=",
+      "firstName": "Tom",
+      "lastName": "Taylor",
+      "jobTitle": "Director, Trade & Investment",
+      "organization": "Investment NSW",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8xODg1MjI2Mw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NTM=",
+      "firstName": "Ariana",
+      "lastName": "Seferiades",
+      "jobTitle": "Program Manager, Education",
+      "organization": "Mila - Quebec AI Institute",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yMDQ5OTc0NQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NTE=",
+      "firstName": "CHRISTOPHE",
+      "lastName": "CLUZEL",
+      "jobTitle": "CMO",
+      "organization": "CBC Radio-Canada",
+      "photoUrl": null,
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjQ5MQ=="
     },
     {
       "id": "RXZlbnRQZW9wbGVfNDE3MjQxOTQ=",
@@ -15743,9 +16853,9 @@
     {
       "id": "RXZlbnRQZW9wbGVfNDE2NDQxMzE=",
       "firstName": "Arthur",
-      "lastName": "Gallucci",
-      "jobTitle": "Sr Director, AI & Innovation",
-      "organization": "McKesson Canada",
+      "lastName": "Galluci",
+      "jobTitle": "Senior Director AI & Innovation",
+      "organization": "McKesson",
       "photoUrl": null,
       "biography": null,
       "userId": "VXNlcl8yNTcxNzM3MQ=="
@@ -16889,1119 +17999,9 @@
       "photoUrl": null,
       "biography": null,
       "userId": "VXNlcl8xODk5NzEyNQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg3MTM=",
-      "firstName": "Rohan",
-      "lastName": "Bhaskar",
-      "jobTitle": "Product Designer",
-      "organization": "Reppo Labs",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcyMg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg3MTI=",
-      "firstName": "Mohamed",
-      "lastName": "Anis BEN ROMDHANE",
-      "jobTitle": "Founder & General Manager",
-      "organization": "GEOMATICS ENGINEERING",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcyMQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg3MTE=",
-      "firstName": "Colin",
-      "lastName": "Quon",
-      "jobTitle": "CEO",
-      "organization": "Excelar",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xNzU5MDk3Ng=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg3MTA=",
-      "firstName": "Jeff",
-      "lastName": "Clark",
-      "jobTitle": "President",
-      "organization": "FAVOLAND CANADA INC.",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcyMA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg3MDk=",
-      "firstName": "Nicolas",
-      "lastName": "Quintin",
-      "jobTitle": "Developpement des affaires",
-      "organization": "GLM Conseil",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8zNDMyMzU4"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg3MDg=",
-      "firstName": "Raghav",
-      "lastName": "Rmadya",
-      "jobTitle": "Founder",
-      "organization": "Reppo Labs",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcxOQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg3MDc=",
-      "firstName": "Kathleen",
-      "lastName": "Reid",
-      "jobTitle": "Founder",
-      "organization": "Playbook",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcxOA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg3MDY=",
-      "firstName": "Sofiane",
-      "lastName": "Bouziri",
-      "jobTitle": "Président",
-      "organization": "GREPSYS",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl82OTE0NTA="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg3MDU=",
-      "firstName": "Amandipp",
-      "lastName": "Singh",
-      "jobTitle": "Founder",
-      "organization": "Enabled Talent",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNDU4MjMzNg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg3MDM=",
-      "firstName": "Stacey",
-      "lastName": "Scott",
-      "jobTitle": "Dean, College of Computational, Mathematical, and Physical Sciences",
-      "organization": "University of Guelph",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcxNw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg3MDI=",
-      "firstName": "Mike",
-      "lastName": "Kennedy",
-      "jobTitle": "CTO",
-      "organization": "BuildBlox",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcxNg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg3MDA=",
-      "firstName": "Gina",
-      "lastName": "Saleh",
-      "jobTitle": "Cheif Marketing Officer",
-      "organization": "Agrobotic.io",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcxNQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2OTk=",
-      "firstName": "Ibrahim",
-      "lastName": "El Chami",
-      "jobTitle": "CEO",
-      "organization": "Agrobotic.io",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcxNA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2OTY=",
-      "firstName": "Dominique",
-      "lastName": "St Louis",
-      "jobTitle": "Directeur général par intérim",
-      "organization": "Prompt",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcxMg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2OTM=",
-      "firstName": "Tom",
-      "lastName": "Corr",
-      "jobTitle": "CEO",
-      "organization": "AI Partnerships Corp..",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcxMA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2OTI=",
-      "firstName": "Kei",
-      "lastName": "Baritugo",
-      "jobTitle": "Director of Global Marketing Communications",
-      "organization": "Montreal AI Ethics Institute",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcwOQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2OTA=",
-      "firstName": "Najoua",
-      "lastName": "Bejaoui",
-      "jobTitle": "Directrice de compte - experte quantique",
-      "organization": "Prompt",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcwOA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2ODg=",
-      "firstName": "Josee",
-      "lastName": "Blanchard",
-      "jobTitle": "Vice-présidente, Technologies et systèmes d’information",
-      "organization": "Ordre des CPA du Québec",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcwNg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2ODc=",
-      "firstName": "Karen",
-      "lastName": "Schmidt",
-      "jobTitle": "Gestionnaire de programme en Intelligence artificielle",
-      "organization": "Prompt",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xMjAyOTM3MA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2ODQ=",
-      "firstName": "Philippe",
-      "lastName": "Nadeau",
-      "jobTitle": "Directeur de livraison",
-      "organization": "Logient nventive",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcwNQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2ODM=",
-      "firstName": "Emilie",
-      "lastName": "Delvoye",
-      "jobTitle": "Directrice des communications",
-      "organization": "Prompt",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xOTIwMTY2MA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2ODI=",
-      "firstName": "Stephane",
-      "lastName": "Marceau",
-      "jobTitle": "Genera Manager - Ventures",
-      "organization": "MILA",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcwNA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2ODE=",
-      "firstName": "Yassine",
-      "lastName": "Ben Haddou",
-      "jobTitle": "Product Owner",
-      "organization": "Airudi",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcwMw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2ODA=",
-      "firstName": "Kathy",
-      "lastName": "Chomyn",
-      "jobTitle": "Director, Products & Services",
-      "organization": "TELUS",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcwMg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2Nzg=",
-      "firstName": "Chris",
-      "lastName": "Mcdaniel",
-      "jobTitle": "Sr Strategy Mgr",
-      "organization": "TELUS",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODcwMA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2NzQ=",
-      "firstName": "Martin",
-      "lastName": "Belanger",
-      "jobTitle": "VP, Technical Sales",
-      "organization": "TELUS",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNjU4OTU4"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2NzM=",
-      "firstName": "Eric",
-      "lastName": "Hu",
-      "jobTitle": "VP of Design & Marketing",
-      "organization": "Cohere",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODY5OA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2NzI=",
-      "firstName": "Sarni",
-      "lastName": "Khouadja",
-      "jobTitle": "CEO",
-      "organization": "Prisma",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODY5Nw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2NzA=",
-      "firstName": "Daniel",
-      "lastName": "Giroux",
-      "jobTitle": "Président",
-      "organization": "Axial",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl80NTU5NDg="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2Njk=",
-      "firstName": "Pierre Yves",
-      "lastName": "Cloutier",
-      "jobTitle": "Responsable de la feuille de route en IA pour la recherche",
-      "organization": "Université Laval",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODY5NQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2Njg=",
-      "firstName": "Catherine Ann",
-      "lastName": "Blackburn",
-      "jobTitle": "Adjointe exécutive au vice-recteur exécutif et pilote de l'Axe IA administration",
-      "organization": "Université Laval",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODY5Ng=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2Njc=",
-      "firstName": "Jean",
-      "lastName": "Lagace",
-      "jobTitle": "VP TI",
-      "organization": "Agropur coopérative",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODY5NA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2NjQ=",
-      "firstName": "Frederic",
-      "lastName": "Dionne",
-      "jobTitle": "Business Development Officer",
-      "organization": "Multiverse Computing",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODY5Mw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2NTk=",
-      "firstName": "Iraia",
-      "lastName": "Ibarzabal",
-      "jobTitle": "Chief Growth Officer",
-      "organization": "Multiverse Computing",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xOTI1MjIwNQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2NTg=",
-      "firstName": "Rana",
-      "lastName": "Sarkar",
-      "jobTitle": "Consul General",
-      "organization": "Global Affairs",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODY5MQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2NTc=",
-      "firstName": "Moe",
-      "lastName": "Dana",
-      "jobTitle": "Product Owner",
-      "organization": "Airudi",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5ODY5MA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDg2NTU=",
-      "firstName": "Alban",
-      "lastName": "DA SILVA",
-      "jobTitle": "Chargé d'Enseignement en Médecine",
-      "organization": "Université Laval",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xODk2OTI2MQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2OTQ=",
-      "firstName": "Shafie",
-      "lastName": "Bahman",
-      "jobTitle": "Markets Insight Analyst",
-      "organization": "Alberta Electric System Operator (AESO)",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgzNQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2OTM=",
-      "firstName": "Mohamed Anis",
-      "lastName": "Benallal",
-      "jobTitle": "Chargé de projets IT senior",
-      "organization": "Réseau de Santé Vitalité",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgzNA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2OTE=",
-      "firstName": "Caroline",
-      "lastName": "Neas",
-      "jobTitle": "Directrice",
-      "organization": "Académie de la transformation numérique de l'Université Laval",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgzMg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2OTA=",
-      "firstName": "VISHAL",
-      "lastName": "BATVIA",
-      "jobTitle": "CTO",
-      "organization": "VisionBox Inc",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTIxNTI4MQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2ODk=",
-      "firstName": "Shubham",
-      "lastName": "Chavan",
-      "jobTitle": "AWS Engineer",
-      "organization": "VisionBox Inc",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgzMQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2ODg=",
-      "firstName": "Pierre",
-      "lastName": "Lemay",
-      "jobTitle": "Administrateur en ressources informationnelles",
-      "organization": "Université Laval - Bureau du numérique en recherche",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgzMA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2ODY=",
-      "firstName": "Carlos",
-      "lastName": "Agudelo",
-      "jobTitle": "Coo",
-      "organization": "Tengiva",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl82MDk0MTg0"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2ODU=",
-      "firstName": "Joffrey",
-      "lastName": "Armellini",
-      "jobTitle": "Director of Product Management",
-      "organization": "IVADO Labs",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yMDg5NzE2Ng=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2ODM=",
-      "firstName": "Alexandre",
-      "lastName": "Brisebois",
-      "jobTitle": "Directeur Principal TI",
-      "organization": "QSL",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xNDMwMjc4"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2ODI=",
-      "firstName": "Denis",
-      "lastName": "Lemarchand",
-      "jobTitle": "Leader de pratique IA",
-      "organization": "Desjardins",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgyOA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2ODA=",
-      "firstName": "Manavi",
-      "lastName": "Parashar",
-      "jobTitle": "Program Manager, Accelerate AI",
-      "organization": "ventureLAB",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgyNw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2Nzk=",
-      "firstName": "Steeve",
-      "lastName": "Bisson",
-      "jobTitle": "Director of Data Engineering",
-      "organization": "AppDirect",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgyNg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2Nzc=",
-      "firstName": "SAPNA",
-      "lastName": "MAHAJAN",
-      "jobTitle": "Director of Policy and Partnerships",
-      "organization": "Genome Canada",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgyNQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2NzQ=",
-      "firstName": "Gabrielle",
-      "lastName": "Monfette",
-      "jobTitle": "Développement des affaires et stratégies marketing",
-      "organization": "ACQ",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgyNA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2NzM=",
-      "firstName": "Thierry Eliot",
-      "lastName": "Villeneuve",
-      "jobTitle": "Président",
-      "organization": "Construction Richard Champagne inc.",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yMzQyNzUx"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2NzI=",
-      "firstName": "Viola",
-      "lastName": "Eichhorn",
-      "jobTitle": "Director of Product",
-      "organization": "Ivado Labs",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgyMg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2NzE=",
-      "firstName": "William",
-      "lastName": "Gelinas Sylvestre",
-      "jobTitle": "Directeur général",
-      "organization": "ACQ",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgyMw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2NzA=",
-      "firstName": "Francois",
-      "lastName": "Groleau",
-      "jobTitle": "Directeur TI",
-      "organization": "Kimpex",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgyMQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2Njk=",
-      "firstName": "Ali",
-      "lastName": "Dika",
-      "jobTitle": "Global VP of HVAC Controls",
-      "organization": "ABB",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgyMA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2Njg=",
-      "firstName": "Nadine",
-      "lastName": "Ghoussain",
-      "jobTitle": "Head of Corporate Risk",
-      "organization": "AM Bank",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgxOQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2Njc=",
-      "firstName": "Christophe",
-      "lastName": "Rodrigues",
-      "jobTitle": "Chief Innovation Officer",
-      "organization": "Exaion inc",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl83OTU2NTAw"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2NjQ=",
-      "firstName": "Stephanie",
-      "lastName": "King",
-      "jobTitle": "Director of AI Initiatives",
-      "organization": "CEIMIA",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xMjAyMzkzMQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2NjI=",
-      "firstName": "Anthony",
-      "lastName": "Dina",
-      "jobTitle": "Field CTO, AI Data Platforms",
-      "organization": "Dell Technologies",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgxNw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2NjE=",
-      "firstName": "Angelo",
-      "lastName": "Mateo",
-      "jobTitle": "Policy Analyst",
-      "organization": "Global Affairs Canada",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgxNg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2NjA=",
-      "firstName": "Juan",
-      "lastName": "Berlie",
-      "jobTitle": "Senior Manager Solution Architecture - Eastern Canada",
-      "organization": "Red Hat",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl84MDYwNzY2"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2NTk=",
-      "firstName": "Francois",
-      "lastName": "Marcoux",
-      "jobTitle": "Director of Product",
-      "organization": "IVADO Labs",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xNjQ1MDIwNg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDU2NTg=",
-      "firstName": "Dan",
-      "lastName": "Dobrescu",
-      "jobTitle": "OpenShift Sales Specialist",
-      "organization": "Red Hat",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5NjgxNQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxNjE=",
-      "firstName": "Allen",
-      "lastName": "Shashaty",
-      "jobTitle": "Senior Manager",
-      "organization": "Deloitte",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xOTI2NzYyOQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxNjA=",
-      "firstName": "Tatiana",
-      "lastName": "Zuniga",
-      "jobTitle": "VP Process Excellence & Digital Transformation",
-      "organization": "JD Irving",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5Mzk2MQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxNTY=",
-      "firstName": "Antoine",
-      "lastName": "GLORY",
-      "jobTitle": "AI Policy",
-      "organization": "CEIMIA",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yMDg3NjQyNQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxNTQ=",
-      "firstName": "Genadi",
-      "lastName": "Valyeyev",
-      "jobTitle": "Senior Software Developer",
-      "organization": "trophi.ai",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTcyMTY3NA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxNTI=",
-      "firstName": "Aida M",
-      "lastName": "Lopes",
-      "jobTitle": "Social Media Marketing",
-      "organization": "BDC",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yMDg5NzE2Nw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxNTE=",
-      "firstName": "Scott",
-      "lastName": "Skanes",
-      "jobTitle": "Data Scientist",
-      "organization": "trophi.ai",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5Mzk1OQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxNDg=",
-      "firstName": "Christopher",
-      "lastName": "Harrison",
-      "jobTitle": "Manager",
-      "organization": "Innovation, Science and Economic Development Canada",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5Mzk1OA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxNDc=",
-      "firstName": "Frederic",
-      "lastName": "Papillon",
-      "jobTitle": "Trade Commissioner",
-      "organization": "Global Affairs Canada",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xNjI3NTA5NQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxNDU=",
-      "firstName": "Uffe",
-      "lastName": "Galsgaard",
-      "jobTitle": "Trade Commissioner",
-      "organization": "Global Affairs Canada",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5Mzk1Nw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxNDQ=",
-      "firstName": "Ramneet",
-      "lastName": "Sran",
-      "jobTitle": "Consul & Head of Office",
-      "organization": "Global Affairs Canada",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xMzUxMzYyMQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxNDI=",
-      "firstName": "Marcelo",
-      "lastName": "Tavares",
-      "jobTitle": "Senior Investment Officer",
-      "organization": "Global Affairs Canada",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xODgyMDE3"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxNDA=",
-      "firstName": "Julie",
-      "lastName": "Bergeron",
-      "jobTitle": "Director",
-      "organization": "J&J",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5Mzk1NQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxMzk=",
-      "firstName": "Eric",
-      "lastName": "Lamoureux",
-      "jobTitle": "Managing Partner",
-      "organization": "PAA Advisory | Conseils",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5Mzk1NA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxMzg=",
-      "firstName": "Josette Renee",
-      "lastName": "Landry",
-      "jobTitle": "CEO",
-      "organization": "Genome Quebec",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5Mzk1Mw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxMzc=",
-      "firstName": "Ian",
-      "lastName": "Rae",
-      "jobTitle": "CEO",
-      "organization": "Aptum",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xNTQxNTIyNg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxMzQ=",
-      "firstName": "Fahad",
-      "lastName": "Shaikh",
-      "jobTitle": "AVP, Data and AI Strategy and Delivery",
-      "organization": "Interac",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5Mzk1Mg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxMzM=",
-      "firstName": "Kevin",
-      "lastName": "Laurent",
-      "jobTitle": "Développeur algo et spécialiste AI",
-      "organization": "Point Laz",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5Mzk1MQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxMzI=",
-      "firstName": "Dominic",
-      "lastName": "Couture",
-      "jobTitle": "Directeur du développement logiciel",
-      "organization": "Point Laz",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5Mzk1MA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxMzE=",
-      "firstName": "Charles",
-      "lastName": "Pitre",
-      "jobTitle": "VPA, Data and Analytics",
-      "organization": "Banque Laurentienne",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5Mzk0OQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxMzA=",
-      "firstName": "Vanessa",
-      "lastName": "Audette",
-      "jobTitle": "Delivery Manager",
-      "organization": "IVADO Labs",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xNjQ1MDIxNA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxMjk=",
-      "firstName": "Martin",
-      "lastName": "Beaulieu",
-      "jobTitle": "Group Head Of Enterprise Applications",
-      "organization": "SFM",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5Mzk0OA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE2MDAxMjc=",
-      "firstName": "Fabien",
-      "lastName": "Antoine",
-      "jobTitle": "Manager - Services conseil IA & Data",
-      "organization": "SENT - Services & Expertise Numérique et Technologique",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5Mzk0Nw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTYwNjk=",
-      "firstName": "Gregory",
-      "lastName": "Calviac",
-      "jobTitle": "President",
-      "organization": "Air Liquide",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5MTk4Mw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTYwNjc=",
-      "firstName": "Sabrina",
-      "lastName": "Rowland Cote",
-      "jobTitle": "Head of Design",
-      "organization": "Global Affairs Canada",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5MTk4Mg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTYwNjU=",
-      "firstName": "Prabhnoor",
-      "lastName": "Kaur",
-      "jobTitle": "Trade Commissioner",
-      "organization": "Global Affairs Canada",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yMDQzMTg2NA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTYwNjQ=",
-      "firstName": "Sanjeevan",
-      "lastName": "Srikrishnan",
-      "jobTitle": "Director, Global Solutions Architecture and Engineering",
-      "organization": "Equinix",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xNTgzNTU4NQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTYwNjI=",
-      "firstName": "Orlane",
-      "lastName": "Vassal",
-      "jobTitle": "Chargée de projet Innovation",
-      "organization": "Groupe Meloche",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5MTk4MQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTYwNjA=",
-      "firstName": "Richard",
-      "lastName": "St Pierre",
-      "jobTitle": "Senior Advisor Defence and Sovereignty",
-      "organization": "Levio",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5MTk3OQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTYwNTg=",
-      "firstName": "Antoine",
-      "lastName": "Gelinas",
-      "jobTitle": "Senior Manager",
-      "organization": "IVADO Labs",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5MTk3OA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTYwNTc=",
-      "firstName": "Farida",
-      "lastName": "Habeichi",
-      "jobTitle": "Trade Commissioner",
-      "organization": "Global Affairs Canada",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xNjM4NzUxNQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTYwNTQ=",
-      "firstName": "Charles",
-      "lastName": "Andrianalizah",
-      "jobTitle": "Attaché économique et commercial",
-      "organization": "Ambassade du Luxembourg à Ottawa",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5MTk3Ng=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTYwNTM=",
-      "firstName": "Mathieu",
-      "lastName": "Fortier",
-      "jobTitle": "Sr Director of AI",
-      "organization": "Coveo",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl85ODEwNzA5"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTQ5NTY=",
-      "firstName": "Rene",
-      "lastName": "Lacombe",
-      "jobTitle": "Vérificateur principal",
-      "organization": "Bureau du vérificateur général - Ville de Mtl",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yMTkxOTUw"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTQ5NTI=",
-      "firstName": "Dominique",
-      "lastName": "Hueber",
-      "jobTitle": "Vérificatrice principale",
-      "organization": "Bureau du vérificateur général - Ville de Mtl",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yMTkxNzkx"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTQ5NDY=",
-      "firstName": "Alex",
-      "lastName": "Villemure",
-      "jobTitle": "Juria.ca",
-      "organization": "CEO & Co-Founder",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5MTI2OA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTQ5MzY=",
-      "firstName": "Francis",
-      "lastName": "Cuillerier",
-      "jobTitle": "Directeur TI",
-      "organization": "Dessercom",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5MTI2Mw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTQ5MzI=",
-      "firstName": "Mathilde",
-      "lastName": "Ouellet",
-      "jobTitle": "Trade Commissioner",
-      "organization": "Global Affairs Canada",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5MTI2MQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTQ5MzA=",
-      "firstName": "Stephanie",
-      "lastName": "Archambault",
-      "jobTitle": "Trade Commissioner",
-      "organization": "Global Affairs Canada",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xNjI4NjY5NA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTQ5Mjg=",
-      "firstName": "Kevin",
-      "lastName": "Chu",
-      "jobTitle": "Trade Commissioner",
-      "organization": "Global Affairs Canada",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY5MTI1OQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1OTQ5MjU=",
-      "firstName": "Ghayath",
-      "lastName": "Haidar",
-      "jobTitle": "Directeur, Solutions d'affaires",
-      "organization": "Ville de Montréal",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8xNTAwMTAzNA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1NzcwOTE=",
-      "firstName": "Elisabeth",
-      "lastName": "Dupuis",
-      "jobTitle": "Director of product",
-      "organization": "Newforma",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY4MTk2NA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1NzA5NTY=",
-      "firstName": "Achal",
-      "lastName": "Aggarwal",
-      "jobTitle": "Co Founder",
-      "organization": "Born West Inc.",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY3OTE5OQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1NzA5NTU=",
-      "firstName": "Mitchell",
-      "lastName": "Wong",
-      "jobTitle": "Solutions Architect Manager",
-      "organization": "Cohere",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY3OTE5OA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1NjgyODE=",
-      "firstName": "Romain",
-      "lastName": "Lortille Bruel",
-      "jobTitle": "Conseiller Senior",
-      "organization": "Conseil de l'innovation du Québec",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY3ODAxMg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1NjgyODA=",
-      "firstName": "Layla",
-      "lastName": "Chergui",
-      "jobTitle": "Designer",
-      "organization": "Graphi-Pers inc",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY3ODAxMQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1Njc1MzA=",
-      "firstName": "Michael",
-      "lastName": "Kovach",
-      "jobTitle": "Canada Sales Representative",
-      "organization": "HORIBA CANADA INC.",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY3NzYyMQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDE1Njc1Mjk=",
-      "firstName": "Antonio",
-      "lastName": "Rojas Navarrete",
-      "jobTitle": "Founding Partner",
-      "organization": "Emant Consultores",
-      "photoUrl": null,
-      "biography": null,
-      "userId": "VXNlcl8yNTY3NzYyMA=="
     }
   ],
   "unique_count": 1800,
-  "total_expected": 2805,
-  "timestamp": "2025-09-12 17:26:08"
+  "total_expected": 2914,
+  "timestamp": "2025-09-13 17:21:57"
 }

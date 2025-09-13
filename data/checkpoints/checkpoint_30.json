@@ -1801,6 +1801,236 @@
       "userId": "VXNlcl8xMTA4NTcxMg=="
     },
     {
+      "id": "RXZlbnRQZW9wbGVfNDE3MzQ2NTA=",
+      "firstName": "Dominic",
+      "lastName": "Marchand",
+      "jobTitle": "Chef de produit, Cellule IA",
+      "organization": "CBC/Radio-Canada",
+      "photoUrl": "https://static.swapcard.com/public/images/62c22f35fe1148d0a5f5f20e69421b7f.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yMDk3NTU0NQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MzQ=",
+      "firstName": "Steven",
+      "lastName": "Wang",
+      "jobTitle": "Chief Executive Officer",
+      "organization": "Venture for Canada",
+      "photoUrl": "https://static.swapcard.com/public/images/a8b40f89f2d34aeca8fc54e9e346b3d1.png",
+      "biography": null,
+      "userId": "VXNlcl8yNTA0NzEzNw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4Mjk=",
+      "firstName": "Stephanie",
+      "lastName": "Bouzar",
+      "jobTitle": "Director, Data Product",
+      "organization": "Air Canada",
+      "photoUrl": "https://cdn-api.swapcard.com/public/images/a80603a634c64c54a10c1d424cf368c1.png",
+      "biography": null,
+      "userId": "VXNlcl8xMzk2MTM4NA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MjY=",
+      "firstName": "Georges",
+      "lastName": "Aczam",
+      "jobTitle": "CEO",
+      "organization": "AquaVerti Farms",
+      "photoUrl": "https://cdn-api.swapcard.com/public/images/759389112e8f472fb0afada6e909dee0.png",
+      "biography": null,
+      "userId": "VXNlcl8xNDI3OTYyMQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MjM=",
+      "firstName": "Patrick",
+      "lastName": "Tessier",
+      "jobTitle": "Head of Data & Analytics",
+      "organization": "Bombardier",
+      "photoUrl": "https://cdn-api.swapcard.com/public/images/05214c7378f94fb29cfa0bbd1f6d5eb7.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8xNDM0NTgy"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU4MjE=",
+      "firstName": "Brigitte",
+      "lastName": "Lariviere",
+      "jobTitle": "CIO",
+      "organization": "Bombardier",
+      "photoUrl": "https://cdn-api.swapcard.com/public/images/d08da13b035d63e3ae100dcfcba6f9b5e23415cd.jpeg",
+      "biography": null,
+      "userId": "VXNlcl82Mjc5MTc="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTg=",
+      "firstName": "Edmond",
+      "lastName": "Samaha",
+      "jobTitle": "Technical Specialist",
+      "organization": "IBM Canada",
+      "photoUrl": "https://static.swapcard.com/public/images/56f1277672c44d24a756a21ece2afcf1.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUxNg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTc=",
+      "firstName": "Jared",
+      "lastName": "Killoran",
+      "jobTitle": "Account Technical Leader",
+      "organization": "IBM Canada",
+      "photoUrl": "https://static.swapcard.com/public/images/52ab2448061d449db4d321aa6bc7ec83.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUxNw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTM=",
+      "firstName": "Rowena",
+      "lastName": "Roy",
+      "jobTitle": "Principal Technology Sales Leader",
+      "organization": "IBM Canada",
+      "photoUrl": "https://cdn-api.swapcard.com/public/images/d2da2def8ebe4a899c38a337214c0436.png",
+      "biography": null,
+      "userId": "VXNlcl8xMDU0MDQ1Mg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTI=",
+      "firstName": "Reine",
+      "lastName": "Karam",
+      "jobTitle": "Technology Seller Representative",
+      "organization": "IBM Canada",
+      "photoUrl": "https://cdn-api.swapcard.com/public/images/d5f194ff41704ca48024985bb35df6ae.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8xMzk0ODIxNw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3OTE=",
+      "firstName": "Alexandre",
+      "lastName": "Caron",
+      "jobTitle": "Directeur Innovation",
+      "organization": "PME MTL Centre-Ouest",
+      "photoUrl": "https://static.swapcard.com/public/images/f7bfefcb568e41aca71430a91572c7d4.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8xOTU1MzAyMg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODk=",
+      "firstName": "Caroline",
+      "lastName": "Santos",
+      "jobTitle": "Director, Strategic AI Integration and Data Management",
+      "organization": "Concordia University",
+      "photoUrl": "https://static.swapcard.com/public/images/97857939bc2a4bd8b60540595fbd3f6f.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUxMg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODc=",
+      "firstName": "Ada",
+      "lastName": "Panduro",
+      "jobTitle": "Directrice Innovation",
+      "organization": "PME MTL Centre-Ouest",
+      "photoUrl": "https://static.swapcard.com/public/images/de7cb7cb9e404575a36e0675d861dc46.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNDEwNTc2NA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODI=",
+      "firstName": "Sven",
+      "lastName": "Buridans",
+      "jobTitle": "Directeur de l'innovation et des partenariats numériques",
+      "organization": "Fédération culturelle canadienne-française",
+      "photoUrl": "https://static.swapcard.com/public/images/2792bee7a6394e329dfc20d6c86dfe84.jpeg",
+      "biography": null,
+      "userId": "VXNlcl85NzUwOTcy"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODE=",
+      "firstName": "Tiana",
+      "lastName": "Wang",
+      "jobTitle": "Product Manager",
+      "organization": "Deloitte",
+      "photoUrl": "https://static.swapcard.com/public/images/0a8b1adebfec4904a78f33bfaf396aed.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUwOA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3ODA=",
+      "firstName": "Jon",
+      "lastName": "Druker",
+      "jobTitle": "Directeur Innovation",
+      "organization": "PME MTL Ouest-de-l'Île",
+      "photoUrl": "https://static.swapcard.com/public/images/9bf19ef31b5648de888003728a10d2e2.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNDQ3OTQ5Ng=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3Nzk=",
+      "firstName": "Omar",
+      "lastName": "Montaz",
+      "jobTitle": "Directeur Innovation",
+      "organization": "PME MTL Centre-Ville",
+      "photoUrl": "https://static.swapcard.com/public/images/5b6c97f84dca427c94f75381e3dd96f3.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8xOTYxMTAzNA=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3Nzg=",
+      "firstName": "Mehdi",
+      "lastName": "Merai",
+      "jobTitle": "CEO",
+      "organization": "JetScale AI",
+      "photoUrl": "https://static.swapcard.com/public/images/0fd7b2cbaef54132a2fb0350cccc9566.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNTc2NjUwNw=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3Njk=",
+      "firstName": "Francis",
+      "lastName": "Perron",
+      "jobTitle": "Co-founder",
+      "organization": "Trinary",
+      "photoUrl": "https://static.swapcard.com/public/images/961b7a9ccb8243ff8f2bf6b21f5e593b.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yMDk2OTU4NQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NjI=",
+      "firstName": "Amelie Roy Fortin",
+      "lastName": "Roy Fortin",
+      "jobTitle": "Directrice du Développement des Affaires",
+      "organization": "NUMANA",
+      "photoUrl": "https://static.swapcard.com/public/images/710af51063bc4a868f08c695e7f43312.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yMzUyNjg4Mg=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NTY=",
+      "firstName": "Jean Luc",
+      "lastName": "Sanscartier",
+      "jobTitle": "VP Data & AI Adoption",
+      "organization": "SBI - Data, AI & EPM",
+      "photoUrl": "https://static.swapcard.com/public/images/2ac0d27ffa244f3c936deabf6a5f7370.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8xNDUyOTA0NQ=="
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NTQ=",
+      "firstName": "Michel",
+      "lastName": "Bourque",
+      "jobTitle": "CEO - COFONDATEUR",
+      "organization": "Cyberdefense AI",
+      "photoUrl": "https://static.swapcard.com/public/images/f0585f4c3c3643b09d61bbdacfa98cfa.png",
+      "biography": null,
+      "userId": "VXNlcl80NTUxMTY1"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjU3NTI=",
+      "firstName": "Jeremy",
+      "lastName": "Uhl",
+      "jobTitle": "Gestionnaire de comptes",
+      "organization": "Solution BI Canada Inc",
+      "photoUrl": "https://static.swapcard.com/public/images/c6f5f1659f72403a9a17afb03a6e901a.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNDY1NjE5Mw=="
+    },
+    {
       "id": "RXZlbnRQZW9wbGVfNDE3MjQxOTM=",
       "firstName": "Denis",
       "lastName": "KESERIS",
@@ -1899,6 +2129,16 @@
       "photoUrl": "https://static.swapcard.com/public/images/249b7398f80b401d8aa24a0435ef49ea.png",
       "biography": null,
       "userId": "VXNlcl8xODgxNTE1"
+    },
+    {
+      "id": "RXZlbnRQZW9wbGVfNDE3MjA4NzE=",
+      "firstName": "Kris",
+      "lastName": "KRÜG",
+      "jobTitle": "Founder and CEO",
+      "organization": "BC + AI Ecosystem Association",
+      "photoUrl": "https://static.swapcard.com/public/images/5bf0713ae53343e1acaa2d0df1dd611e.jpeg",
+      "biography": null,
+      "userId": "VXNlcl8yNTc2MzU5NQ=="
     },
     {
       "id": "RXZlbnRQZW9wbGVfNDE3MjA3MDM=",
@@ -2014,7 +2254,7 @@
       "id": "RXZlbnRQZW9wbGVfNDE3MTU0NDY=",
       "firstName": "Michelson",
       "lastName": "Chery",
-      "jobTitle": "Architecte de solutions",
+      "jobTitle": "Solution Architect",
       "organization": "Leaseweb",
       "photoUrl": "https://cdn-api.swapcard.com/public/images/cb3d49aef7ce45219df74a7c5bb259a8.jpeg",
       "biography": null,
@@ -2962,8 +3202,8 @@
     },
     {
       "id": "RXZlbnRQZW9wbGVfNDE2MDg3MzI=",
-      "firstName": "Tarak",
-      "lastName": "Bouattour",
+      "firstName": "TARAK",
+      "lastName": "BOUATTOUR",
       "jobTitle": "CEO",
       "organization": "TAWASOL TECHNOLOGY",
       "photoUrl": "https://cdn-api.swapcard.com/public/images/343ed69841384bd1a7c1ddb83e019c65.jpg",
@@ -6756,7 +6996,7 @@
       "lastName": "Anzarut",
       "jobTitle": "Field Marketing Manager, Data AI and Automation",
       "organization": "IBM Cabada",
-      "photoUrl": "https://static.swapcard.com/public/images/286b630aa1874dfb962af76f5cc3d8bc.jpeg",
+      "photoUrl": "https://static.swapcard.com/public/images/3b897b65fbec40c88aded573889f29af.jpeg",
       "biography": null,
       "userId": "VXNlcl81Mjc2OTcz"
     },
@@ -7671,6 +7911,16 @@
       "userId": "VXNlcl8yNTEzMDc4Ng=="
     },
     {
+      "id": "RXZlbnRQZW9wbGVfNDA1MDI0ODg=",
+      "firstName": "Vincent",
+      "lastName": "Fraser",
+      "jobTitle": "Président et chef de la direction",
+      "organization": "Croesus",
+      "photoUrl": "https://static.swapcard.com/public/images/b182636f4b0947d3a20809a6da1992ca.png",
+      "biography": null,
+      "userId": "VXNlcl8yNTEyOTgzMQ=="
+    },
+    {
       "id": "RXZlbnRQZW9wbGVfNDA0Nzk3MDE=",
       "firstName": "Louis-Pierre",
       "lastName": "Gravelle",
@@ -7942,9 +8192,9 @@
     },
     {
       "id": "RXZlbnRQZW9wbGVfNDA0MTgzODg=",
-      "firstName": "Irene",
+      "firstName": "Irene Rose",
       "lastName": "Saliendra",
-      "jobTitle": "Chief Executive Officer",
+      "jobTitle": "CEO",
       "organization": "Fem Entity",
       "photoUrl": "https://static.swapcard.com/public/images/cbdc7736d3f448238d09c10bbfe2f365.jpeg",
       "biography": null,
@@ -8015,7 +8265,7 @@
       "firstName": "Kip",
       "lastName": "Warner",
       "jobTitle": "Founder",
-      "organization": "CARTESIAN THEATRE CORP.",
+      "organization": "Cartesian Theatre Corp",
       "photoUrl": "https://static.swapcard.com/public/images/8f2cf7207df0464abf2590147435039b.jpeg",
       "biography": null,
       "userId": "VXNlcl8yNDEwNzE4Ng=="
@@ -8105,7 +8355,7 @@
       "firstName": "Sebastien",
       "lastName": "Delorme",
       "jobTitle": "CTO",
-      "organization": "Scopia Tech",
+      "organization": "Scopia Surgical",
       "photoUrl": "https://static.swapcard.com/public/images/f9f3db659d27445aa36720639f08df42.jpeg",
       "biography": null,
       "userId": "VXNlcl8yNTA4NjE5Ng=="
@@ -8482,9 +8732,9 @@
     },
     {
       "id": "RXZlbnRQZW9wbGVfNDA0MTg2ODM=",
-      "firstName": "Louis Philippe",
-      "lastName": "Dea",
-      "jobTitle": "Président",
+      "firstName": "Employe Nom A Venir",
+      "lastName": "Employe Nom A Venir",
+      "jobTitle": "Spécialiste marketing",
       "organization": "Effet Cumulatif",
       "photoUrl": "https://static.swapcard.com/public/images/1a7579494e41490f84ac48673a6aa371.jpeg",
       "biography": null,
@@ -8684,8 +8934,8 @@
       "id": "RXZlbnRQZW9wbGVfNDA0MTg1OTg=",
       "firstName": "Mary",
       "lastName": "Tse",
-      "jobTitle": "Business Development Executive in Sales",
-      "organization": "eStruxture Data center",
+      "jobTitle": "Business Development Executive",
+      "organization": "eStruxture Data Centers",
       "photoUrl": "https://static.swapcard.com/public/images/9674df3757974728950fb942ae574db4.jpeg",
       "biography": null,
       "userId": "VXNlcl82MTA4MTE5"
@@ -8749,259 +8999,9 @@
       "photoUrl": "https://static.swapcard.com/public/images/95e2011f9a1c46b0a1dfd89186be8cc9.jpeg",
       "biography": null,
       "userId": "VXNlcl8xMDA0MDM4OA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg1Njk=",
-      "firstName": "Yannick",
-      "lastName": "Ramond",
-      "jobTitle": "Consultant",
-      "organization": "DatActors",
-      "photoUrl": "https://static.swapcard.com/public/images/1ff022e8623543899274184f6b9e8ae7.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8zOTU5ODU="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg1Njg=",
-      "firstName": "Pascale",
-      "lastName": "Fornasier",
-      "jobTitle": "Vice-présidente",
-      "organization": "Polyforce Inc.",
-      "photoUrl": "https://static.swapcard.com/public/images/ee2db7d3439b4651925c7e3b9dc771dc.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8yMDg3NjE0Ng=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg1Njc=",
-      "firstName": "Francois",
-      "lastName": "Dancose",
-      "jobTitle": "Président",
-      "organization": "Polyforce Inc.",
-      "photoUrl": "https://static.swapcard.com/public/images/05e3d5ade4e144bfbd36098251df3e0c.jpg",
-      "biography": null,
-      "userId": "VXNlcl8yMDg3NTk4Nw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg1NjI=",
-      "firstName": "Norman",
-      "lastName": "Valdez",
-      "jobTitle": "Director, Technology and Design, Marketing and Communications",
-      "organization": "CERIC",
-      "photoUrl": "https://cdn-api.swapcard.com/public/images/855c34569d3b41e5a5bd2b98dbae1b89.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8xODI5ODY4Mg=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0NzQ=",
-      "firstName": "Robin",
-      "lastName": "Russell",
-      "jobTitle": "Strategic Communications Consultant",
-      "organization": "Robin Russell Communications",
-      "photoUrl": "https://static.swapcard.com/public/images/d245cb1f53534af0b278815d67682648.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8yNTA4NjI2Nw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0NzE=",
-      "firstName": "Amanda",
-      "lastName": "Martinez",
-      "jobTitle": "Directrice Générale",
-      "organization": "Atecna",
-      "photoUrl": "https://static.swapcard.com/public/images/acdc3f4dd4ad4e3c87ae19d834023dcd.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8yNTE3NDcx"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0NjU=",
-      "firstName": "Melanie",
-      "lastName": "Trudelle",
-      "jobTitle": "Principal, Compensation",
-      "organization": "Normandin Beaudry",
-      "photoUrl": "https://static.swapcard.com/public/images/7f28dc2f63d94af78ed7f9ee304399b7.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8yMDM1NTUzMw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0NjM=",
-      "firstName": "Sebastien",
-      "lastName": "Bilodeau",
-      "jobTitle": "Consultant, Innovation and software solutions",
-      "organization": "Normandin Beaudry",
-      "photoUrl": "https://static.swapcard.com/public/images/2eea12c8c32b44d38a51c346baa225f8.png",
-      "biography": null,
-      "userId": "VXNlcl8xNjQ1NjQ0Ng=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0NjI=",
-      "firstName": "Daniel",
-      "lastName": "Marcotte",
-      "jobTitle": "CIO, Information Technology and Security Direction",
-      "organization": "Normandin Beaudry",
-      "photoUrl": "https://static.swapcard.com/public/images/bdf03b8406164755bc46e86c6019d2a6.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8yMDYyMTEyMA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0NjE=",
-      "firstName": "Etienne",
-      "lastName": "Boucher",
-      "jobTitle": "Partner, Compensation",
-      "organization": "Normandin Beaudry",
-      "photoUrl": "https://static.swapcard.com/public/images/f4fdd7c087564c0d973224d00739d1e5.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8xNjQ1NzY0Ng=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0NTY=",
-      "firstName": "Lena",
-      "lastName": "Rossard",
-      "jobTitle": "VP Innovation et Marketing",
-      "organization": "Mouvement Québécois de la Qualité",
-      "photoUrl": "https://static.swapcard.com/public/images/caaeaeb9e4734b0c9a665d240f1a70d1.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8xOTc5Mzg2OA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0NDk=",
-      "firstName": "Kelly",
-      "lastName": "MARTIN",
-      "jobTitle": "Founder",
-      "organization": "Southpaw Lab",
-      "photoUrl": "https://static.swapcard.com/public/images/d6fefd690be74883be9c99fe76fa40f5.png",
-      "biography": null,
-      "userId": "VXNlcl8yNTA4NjI1NA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0NDY=",
-      "firstName": "Vanessa",
-      "lastName": "Alarie",
-      "jobTitle": "Conseillère, transfert technologique et innovation",
-      "organization": "IVADO",
-      "photoUrl": "https://cdn-api.swapcard.com/public/images/0859c417647c46deb1f1cdc46e4d79b3.png",
-      "biography": null,
-      "userId": "VXNlcl80OTE0ODcy"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0NDE=",
-      "firstName": "Zakaria",
-      "lastName": "Sassioui",
-      "jobTitle": "Head Of Data",
-      "organization": "Theunknown",
-      "photoUrl": "https://static.swapcard.com/public/images/f6ad5e2f6c574fbc9e74d87485914ffd.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8xMDAxNjgyNA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0Mzg=",
-      "firstName": "Sylvain",
-      "lastName": "Bureau",
-      "jobTitle": "Head Of Partnerships",
-      "organization": "Zaion",
-      "photoUrl": "https://static.swapcard.com/public/images/ac8acc45da0641028bf5b2e723c09d85.png",
-      "biography": null,
-      "userId": "VXNlcl8yNTA4NjI0OA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0MzU=",
-      "firstName": "Pauline",
-      "lastName": "Boisbouvier",
-      "jobTitle": "CEO Cofounder",
-      "organization": "HINT",
-      "photoUrl": "https://static.swapcard.com/public/images/a68292254b4943da88f2fb5e21e772c2.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8xNjQ4MDU0NQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0Mjg=",
-      "firstName": "Marko",
-      "lastName": "Zlatanovic",
-      "jobTitle": "CTO",
-      "organization": "MiraNu",
-      "photoUrl": "https://static.swapcard.com/public/images/a105259d4fa84eca8364d6c13c05eebd.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8yNTA4NjIzOA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0Mjc=",
-      "firstName": "Jelena",
-      "lastName": "Savic Brkic",
-      "jobTitle": "CEO",
-      "organization": "MiraNu",
-      "photoUrl": "https://static.swapcard.com/public/images/e3c4041d74da4990a23c7f78017364f8.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8yNTA4NjIzOQ=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0MjY=",
-      "firstName": "Tony",
-      "lastName": "Aube",
-      "jobTitle": "President",
-      "organization": "Amical",
-      "photoUrl": "https://static.swapcard.com/public/images/a88578476de6412ea4b47d07b6ec6fb6.png",
-      "biography": null,
-      "userId": "VXNlcl8yNTA4NjIzNw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0MjM=",
-      "firstName": "Anish",
-      "lastName": "Madhu",
-      "jobTitle": "Co Founder",
-      "organization": "Rollout Technologies",
-      "photoUrl": "https://static.swapcard.com/public/images/f76342f3f9a2415dadfedfa0be62c39e.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8yMDg4MjAzMw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0MjI=",
-      "firstName": "Rishi",
-      "lastName": "Sareen",
-      "jobTitle": "Head Of Growth",
-      "organization": "Startup Fuel Inc",
-      "photoUrl": "https://cdn-api.swapcard.com/public/images/07dd867e493e4e018cbcad9a766b5867.png",
-      "biography": null,
-      "userId": "VXNlcl8xODQ5MTE1"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0MTk=",
-      "firstName": "Nicholas",
-      "lastName": "Ning",
-      "jobTitle": "CEO",
-      "organization": "Farpoint Technologies",
-      "photoUrl": "https://static.swapcard.com/public/images/a3e89203378d4b819f3f32a692f0ebbf.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8xNjY3Mjc2Mw=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0MTg=",
-      "firstName": "Val",
-      "lastName": "Florimond",
-      "jobTitle": "CTO",
-      "organization": "Totum Tech",
-      "photoUrl": "https://static.swapcard.com/public/images/9cc4fc39625a4e54ac4d2717bda7c179.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8yNTA4NjIzNA=="
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0MTY=",
-      "firstName": "Maria Julia",
-      "lastName": "Guimaraes",
-      "jobTitle": "CEO",
-      "organization": "Totum Tech",
-      "photoUrl": "https://static.swapcard.com/public/images/892eec33642a49c7996645739a1641c5.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8xODQ3MTc5"
-    },
-    {
-      "id": "RXZlbnRQZW9wbGVfNDA0MTg0MDk=",
-      "firstName": "Reza",
-      "lastName": "Fazeli",
-      "jobTitle": "CTO",
-      "organization": "Retide",
-      "photoUrl": "https://static.swapcard.com/public/images/8186396b2bcb41c1a0e83b2fae01c0c9.jpeg",
-      "biography": null,
-      "userId": "VXNlcl8yNTA4NjIyOQ=="
     }
   ],
   "unique_count": 900,
-  "total_expected": 2805,
-  "timestamp": "2025-09-12 17:25:49"
+  "total_expected": 2914,
+  "timestamp": "2025-09-13 17:21:37"
 }
