@@ -91,7 +91,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# Title
+# Title with LIVE indicator
 st.markdown('<h1 class="main-header">🎯 All In 2025 Analytics Dashboard</h1>', unsafe_allow_html=True)
 
 # Test database connection on first load
@@ -106,6 +106,15 @@ if 'db_connected' not in st.session_state:
 # Get dashboard summary
 summary = get_dashboard_summary()
 
+# Add LIVE indicator
+st.markdown("""
+<div style="text-align: center; margin-bottom: 1rem;">
+    <span style="background-color: #28a745; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: bold;">
+        🔴 LIVE DATA
+    </span>
+</div>
+""", unsafe_allow_html=True)
+
 # Display key metrics at the top
 col1, col2, col3, col4, col5 = st.columns(5)
 
@@ -113,14 +122,14 @@ with col1:
     st.metric(
         "Total Attendees", 
         f"{summary.get('total_attendees', 0):,}",
-        f"+{summary.get('today_new', 0)} today"
+        f"+{summary.get('week_new', 0)} this week"
     )
 
 with col2:
     st.metric(
         "Organizations", 
         f"{summary.get('unique_orgs', 0):,}",
-        f"+{summary.get('week_new', 0) if summary.get('week_new', 0) > 0 else 0} this week"
+        f"+{summary.get('new_orgs_week', 0) if summary.get('new_orgs_week', 0) > 0 else 0} this week"
     )
 
 with col3:
@@ -216,7 +225,8 @@ with st.sidebar:
 # Main content area with tabs
 tabs = st.tabs([
     "📊 Overview",
-    "🆕 New Attendees", 
+    "🆕 New Attendees",
+    "🎯 AI Interest List",
     "📈 Growth Analytics",
     "🌍 Geographic Distribution", 
     "🏢 Industries & Organizations", 
@@ -265,8 +275,8 @@ with tabs[0]:
             fig.update_layout(height=400, yaxis={'categoryorder':'total ascending'})
             st.plotly_chart(fig, use_container_width=True)
 
-# Tab 3: Growth Analytics (NEW!)
-with tabs[2]:
+# Tab 4: Growth Analytics
+with tabs[3]:
     st.header("📈 Growth Analytics")
     
     # Date range selector
@@ -278,65 +288,147 @@ with tabs[2]:
     growth_data = get_growth_timeline(days_back)
     
     if not growth_data.empty:
-        # Growth chart
-        fig = go.Figure()
+        # Simple approach: Set the first data point (Sept 11) to 0 if it's the initial import
+        # Store original value for display
+        original_first_day_signups = None
+        if len(growth_data) > 0:
+            first_date = growth_data.iloc[0]['date']
+            # Check if this is Sept 11, 2024 (or Sept 10, depending on data)
+            if pd.to_datetime(first_date).date() <= pd.Timestamp('2025-09-11').date():
+                original_first_day_signups = growth_data.iloc[0]['new_signups']
+                # Set first day to 0 for visualization
+                growth_data.iloc[0, growth_data.columns.get_loc('new_signups')] = 0
+                
+                # Add a note about the baseline
+                st.info(f"📌 Initial data import of {original_first_day_signups:,} attendees on {pd.to_datetime(first_date).strftime('%B %d, %Y')} (excluded from daily averages)")
         
-        # Add bar chart for daily signups
-        fig.add_trace(go.Bar(
+        # For statistics, we'll use the index to exclude the first day
+        sept_11 = pd.to_datetime(growth_data.iloc[0]['date']).date() if len(growth_data) > 0 else None
+        
+        # Growth statistics FIRST
+        st.subheader("📊 Growth Statistics")
+        col1, col2, col3, col4 = st.columns(4)
+        
+        # Calculate stats excluding first day (baseline)
+        # Skip first row if it's the initial import
+        if original_first_day_signups is not None:
+            signups_excl_baseline = growth_data.iloc[1:]['new_signups']
+        else:
+            signups_excl_baseline = growth_data['new_signups']
+        
+        with col1:
+            avg_daily = signups_excl_baseline.mean() if len(signups_excl_baseline) > 0 else 0
+            st.metric("Average Daily Signups", f"{avg_daily:.1f}")
+        
+        with col2:
+            # Best day excluding first day if it's baseline
+            if original_first_day_signups is not None:
+                best_days = growth_data.iloc[1:]
+            else:
+                best_days = growth_data
+            
+            if not best_days.empty:
+                max_day = best_days.loc[best_days['new_signups'].idxmax()]
+                st.metric("Best Day", f"{max_day['new_signups']:,}", f"{pd.to_datetime(max_day['date']).strftime('%b %d')}")
+        
+        with col3:
+            total_growth = signups_excl_baseline.sum()
+            st.metric(f"New in {days_back} Days", f"{total_growth:,}")
+        
+        with col4:
+            # Growth rate
+            if len(growth_data) > 1:
+                first_val = growth_data.iloc[0]['cumulative_attendees']
+                last_val = growth_data.iloc[-1]['cumulative_attendees']
+                growth_rate = ((last_val - first_val) / first_val * 100) if first_val > 0 else 0
+                st.metric("Growth Rate", f"{growth_rate:.1f}%")
+        
+        st.divider()
+        
+        # Daily Signups Chart (SECOND)
+        st.subheader("📈 Daily New Signups")
+        fig_daily = go.Figure()
+        
+        # Bar chart for daily signups
+        fig_daily.add_trace(go.Bar(
             x=growth_data['date'],
             y=growth_data['new_signups'],
             name='Daily Signups',
             marker_color='lightblue',
-            yaxis='y'
+            text=growth_data['new_signups'],
+            textposition='outside'
         ))
         
-        # Add line chart for cumulative
-        fig.add_trace(go.Scatter(
-            x=growth_data['date'],
-            y=growth_data['cumulative_attendees'],
-            name='Cumulative Total',
-            line=dict(color='darkblue', width=3),
-            yaxis='y2'
-        ))
-        
-        # Add moving average
+        # Add moving average (recalculate excluding Sept 11)
         if 'moving_avg_7d' in growth_data.columns:
-            fig.add_trace(go.Scatter(
-                x=growth_data['date'],
-                y=growth_data['moving_avg_7d'],
+            # Recalculate moving average without Sept 11
+            growth_data_copy = growth_data.copy()
+            # Calculate rolling average excluding the baseline day
+            growth_data_copy['recalc_ma'] = growth_data_copy['new_signups'].rolling(
+                window=7, min_periods=1, center=False
+            ).mean()
+            
+            fig_daily.add_trace(go.Scatter(
+                x=growth_data_copy['date'],
+                y=growth_data_copy['recalc_ma'],
                 name='7-Day Moving Avg',
-                line=dict(color='orange', dash='dash'),
-                yaxis='y'
+                line=dict(color='orange', dash='dash', width=2)
             ))
         
-        fig.update_layout(
-            title="Attendee Growth Over Time",
+        fig_daily.update_layout(
             xaxis_title="Date",
-            yaxis=dict(title="Daily Signups", side="left"),
-            yaxis2=dict(title="Cumulative Total", overlaying="y", side="right"),
+            yaxis_title="Number of Signups",
             hovermode='x unified',
-            height=500
+            height=400,
+            showlegend=True
         )
         
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig_daily, use_container_width=True)
         
-        # Growth statistics
-        col1, col2, col3 = st.columns(3)
+        # Cumulative Total Chart (THIRD)
+        st.subheader("📊 Cumulative Total Attendees")
+        fig_cumulative = go.Figure()
         
-        with col1:
-            avg_daily = growth_data['new_signups'].mean()
-            st.metric("Average Daily Signups", f"{avg_daily:.1f}")
+        # Line chart for cumulative total
+        fig_cumulative.add_trace(go.Scatter(
+            x=growth_data['date'],
+            y=growth_data['cumulative_attendees'],
+            name='Total Attendees',
+            line=dict(color='darkblue', width=3),
+            fill='tozeroy',
+            fillcolor='rgba(31, 119, 180, 0.2)'
+        ))
         
-        with col2:
-            max_day = growth_data.loc[growth_data['new_signups'].idxmax()]
-            st.metric("Best Day", f"{max_day['new_signups']:,}", f"{max_day['date'].strftime('%b %d')}")
+        # Add markers for milestones
+        milestones = [1000, 2000, 2500, 3000]
+        for milestone in milestones:
+            milestone_data = growth_data[growth_data['cumulative_attendees'] >= milestone]
+            if not milestone_data.empty:
+                first_day = milestone_data.iloc[0]
+                fig_cumulative.add_annotation(
+                    x=first_day['date'],
+                    y=milestone,
+                    text=f"{milestone:,}",
+                    showarrow=True,
+                    arrowhead=2,
+                    arrowsize=1,
+                    arrowwidth=1,
+                    arrowcolor="green",
+                    ax=-30,
+                    ay=-30
+                )
         
-        with col3:
-            total_growth = growth_data['new_signups'].sum()
-            st.metric(f"Total in {days_back} Days", f"{total_growth:,}")
+        fig_cumulative.update_layout(
+            xaxis_title="Date",
+            yaxis_title="Total Attendees",
+            hovermode='x unified',
+            height=400
+        )
+        
+        st.plotly_chart(fig_cumulative, use_container_width=True)
 
-# Tab 4: Geographic Distribution
-with tabs[3]:
+# Tab 5: Geographic Distribution
+with tabs[4]:
     st.header("🌍 Geographic Distribution")
     
     geo_data = get_geographic_distribution()
@@ -433,8 +525,8 @@ with tabs[3]:
             )
             st.plotly_chart(fig, use_container_width=True)
 
-# Tab 5: Industries & Organizations
-with tabs[4]:
+# Tab 6: Industries & Organizations
+with tabs[5]:
     st.header("🏢 Industries & Organizations")
     
     col1, col2 = st.columns(2)
@@ -466,8 +558,8 @@ with tabs[4]:
             fig = create_bar_chart(org_type_dist, "Organization Types", color_scale="Oranges")
             st.plotly_chart(fig, use_container_width=True)
 
-# Tab 6: Roles & Positions
-with tabs[5]:
+# Tab 7: Roles & Positions
+with tabs[6]:
     st.header("👥 Roles & Positions")
     
     col1, col2 = st.columns(2)
@@ -500,8 +592,8 @@ with tabs[5]:
             )
             st.plotly_chart(fig, use_container_width=True)
 
-# Tab 7: Interests & AI Maturity
-with tabs[6]:
+# Tab 8: Interests & AI Maturity
+with tabs[7]:
     st.header("🎯 Interests & AI Maturity")
     
     col1, col2 = st.columns(2)
@@ -567,93 +659,7 @@ with tabs[6]:
 
 # Tab 2: New Attendees  
 with tabs[1]:
-    st.header("🆕 New Attendees & Filtered Lists")
-    
-    # Add filtering section
-    st.subheader("🔍 Quick Filters")
-    
-    # Import filter functions if in live mode
-    if selected_run == 'Latest':
-        from utils.db_queries import get_filtered_attendees, get_filter_counts
-        
-        # Get filter counts
-        filter_counts = get_filter_counts({})
-        
-        # Create filter columns
-        filter_col1, filter_col2, filter_col3, filter_col4 = st.columns(4)
-        
-        with filter_col1:
-            show_ai_seekers = st.checkbox(
-                f"🤖 AI Solution Seekers ({filter_counts.get('ai_seekers', 0):,})",
-                help="People exploring or implementing AI solutions"
-            )
-        
-        with filter_col2:
-            show_executives = st.checkbox(
-                f"👔 Executives ({filter_counts.get('executives', 0):,})",
-                help="C-level, VPs, Directors, Founders"
-            )
-        
-        with filter_col3:
-            show_canada = st.checkbox(
-                f"🇨🇦 Canada ({filter_counts.get('canada', 0):,})",
-                help="Attendees from Canada"
-            )
-        
-        with filter_col4:
-            export_filtered = st.button("📥 Export Filtered List", type="secondary")
-        
-        # Apply filters if any are selected
-        active_filters = {}
-        if show_ai_seekers:
-            active_filters['ai_seekers'] = True
-        if show_executives:
-            active_filters['executives'] = True
-        if show_canada:
-            active_filters['canada'] = True
-        
-        # Show filtered results if filters are active
-        if active_filters:
-            st.divider()
-            st.subheader("📊 Filtered Attendees")
-            
-            filtered_df = get_filtered_attendees(active_filters, limit=1000)
-            
-            if not filtered_df.empty:
-                # Show summary
-                col1, col2, col3 = st.columns(3)
-                with col1:
-                    st.metric("Total Matches", f"{len(filtered_df):,}")
-                with col2:
-                    unique_orgs = filtered_df['organization'].nunique() if 'organization' in filtered_df.columns else 0
-                    st.metric("Unique Organizations", f"{unique_orgs:,}")
-                with col3:
-                    unique_countries = filtered_df['country'].nunique() if 'country' in filtered_df.columns else 0
-                    st.metric("Countries", f"{unique_countries:,}")
-                
-                # Display the filtered data
-                display_cols = ['name', 'organization', 'job_title', 'country', 'ai_maturity']
-                st.dataframe(
-                    filtered_df[display_cols].head(100),
-                    use_container_width=True,
-                    height=400
-                )
-                
-                # Export functionality
-                if export_filtered:
-                    csv = filtered_df.to_csv(index=False)
-                    st.download_button(
-                        label="📥 Download Full Filtered List (CSV)",
-                        data=csv,
-                        file_name=f"filtered_attendees_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
-                        mime="text/csv"
-                    )
-            else:
-                st.info("No attendees match the selected filters")
-    
-    # Divider between filters and recent activity
-    st.divider()
-    st.subheader("📅 Recent Activity")
+    st.header("🆕 New Attendees (Today)")
     
     # Check if we're viewing historical or live data
     if selected_run != 'Latest':
@@ -663,54 +669,104 @@ with tabs[1]:
         
         if not recent_activity.empty:
             st.info(f"Showing new attendees compared to previous run")
+            new_signups = recent_activity
+        else:
+            new_signups = pd.DataFrame()
     else:
-        # Live database - use time-based query
-        # Time range selector
-        hours_back = st.slider("Show new attendees from last N hours:", 24, 168, 48)
-        
-        # Get recent activity
-        recent_activity = get_recent_activity(hours_back)
+        # Live database - get today's new signups
+        from utils.db_queries import get_todays_new_attendees
+        new_signups = get_todays_new_attendees()
     
-    if not recent_activity.empty:
-        # Split by activity type
-        new_signups = recent_activity[recent_activity['activity_type'] == 'New Signup']
-        updates = recent_activity[recent_activity['activity_type'] == 'Profile Update']
-        
-        col1, col2 = st.columns(2)
-        
+    if not new_signups.empty:
+        # Show metrics
+        col1, col2, col3 = st.columns(3)
         with col1:
-            st.subheader(f"🆕 New Signups ({len(new_signups)})")
-            if not new_signups.empty:
-                st.dataframe(
-                    new_signups[['name', 'organization', 'country', 'timestamp']].head(50),
-                    use_container_width=True
-                )
-        
+            st.metric("New Signups", f"{len(new_signups)}")
         with col2:
-            st.subheader(f"📝 Profile Updates ({len(updates)})")
-            if not updates.empty:
-                st.dataframe(
-                    updates[['name', 'organization', 'country', 'timestamp']].head(50),
-                    use_container_width=True
-                )
+            unique_orgs = new_signups['organization'].nunique() if 'organization' in new_signups.columns else 0
+            st.metric("Organizations", f"{unique_orgs}")
+        with col3:
+            unique_countries = new_signups['country'].nunique() if 'country' in new_signups.columns else 0
+            st.metric("Countries", f"{unique_countries}")
         
-        # Timeline chart - only show for live database
-        if data_source == "Live Database":
-            st.subheader("Activity Timeline")
-            activity_by_hour = recent_activity.set_index('timestamp').resample('1h').size()
-            
-            fig = px.line(
-                x=activity_by_hour.index,
-                y=activity_by_hour.values,
-                title=f"Activity in Last {hours_back} Hours",
-                labels={'x': 'Time', 'y': 'Number of Activities'}
-            )
-            st.plotly_chart(fig, use_container_width=True)
+        # Show the data
+        display_cols = ['name', 'organization', 'job_title', 'country', 'timestamp']
+        available_cols = [col for col in display_cols if col in new_signups.columns]
+        
+        st.dataframe(
+            new_signups[available_cols].head(200),
+            use_container_width=True,
+            height=600
+        )
     else:
-        st.info("No new attendees or activity to show for this period.")
+        st.info("No new signups today")
 
-# Tab 8: Data Quality
-with tabs[7]:
+# Tab 3: AI Interest List
+with tabs[2]:
+    st.header("🎯 AI Interest List")
+    st.caption("Canadian executives who are exploring or implementing AI solutions")
+    
+    # Only available for live database
+    if selected_run == 'Latest':
+        from utils.db_queries import get_filtered_attendees
+        
+        # Apply all three filters together (AND condition)
+        combined_filters = {
+            'ai_seekers': True,
+            'executives': True,
+            'canada': True
+        }
+        
+        # Get combined filtered list
+        filtered_df = get_filtered_attendees(combined_filters, limit=5000)
+        
+        if not filtered_df.empty:
+            # Show metrics
+            col1, col2, col3, col4 = st.columns(4)
+            with col1:
+                st.metric("Total Matches", f"{len(filtered_df):,}")
+            with col2:
+                unique_orgs = filtered_df['organization'].nunique() if 'organization' in filtered_df.columns else 0
+                st.metric("Organizations", f"{unique_orgs:,}")
+            with col3:
+                unique_provinces = filtered_df['province'].nunique() if 'province' in filtered_df.columns else 0
+                st.metric("Provinces", f"{unique_provinces}")
+            with col4:
+                # Count AI maturity types
+                if 'ai_maturity' in filtered_df.columns:
+                    interest_count = (filtered_df['ai_maturity'] == 'Interest, but no project').sum()
+                    pilot_count = (filtered_df['ai_maturity'] == 'Pilot project underway').sum()
+                    st.metric("Interest/Pilot", f"{interest_count}/{pilot_count}")
+            
+            # Display the data with LinkedIn field
+            display_cols = ['name', 'organization', 'job_title', 'province', 'ai_maturity', 'social_linkedin', 'email']
+            available_cols = [col for col in display_cols if col in filtered_df.columns]
+            
+            # Make sure we have the columns we need
+            if available_cols:
+                st.dataframe(
+                    filtered_df[available_cols],
+                    use_container_width=True,
+                    height=600
+                )
+                
+                # Export button
+                csv = filtered_df.to_csv(index=False)
+                st.download_button(
+                    label="📥 Export AI Interest List (CSV)",
+                    data=csv,
+                    file_name=f"ai_interest_list_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                    mime="text/csv"
+                )
+            else:
+                st.error("No columns available to display")
+        else:
+            st.info("No attendees match all criteria (Canadian + Executive + AI Interest)")
+    else:
+        st.info("AI Interest List is only available for live database view")
+
+# Tab 9: Data Quality
+with tabs[8]:
     st.header("📋 Data Quality Metrics")
     
     if 'data_completeness' in stats:

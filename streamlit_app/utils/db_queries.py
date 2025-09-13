@@ -551,11 +551,13 @@ def get_filtered_attendees(filters: dict, limit: int = 500) -> pd.DataFrame:
             organization,
             job_title,
             detail_country as country,
+            detail_province as province,
             detail_industry as industry,
             detail_position_type as position_type,
             detail_ai_maturity as ai_maturity,
             detail_interests as interests,
             detail_motivation as motivation,
+            social_linkedin,
             first_seen_at
         FROM attendees
         {'WHERE ' + ' AND '.join(where_clauses) if where_clauses else ''}
@@ -565,6 +567,28 @@ def get_filtered_attendees(filters: dict, limit: int = 500) -> pd.DataFrame:
     
     params.append(limit)
     return run_query(query, tuple(params))
+
+@st.cache_data(ttl=300)  # 5 minute cache
+def get_todays_new_attendees() -> pd.DataFrame:
+    """
+    Get attendees who signed up today
+    """
+    query = """
+        SELECT 
+            first_name || ' ' || last_name as name,
+            email,
+            organization,
+            job_title,
+            detail_country as country,
+            detail_province as province,
+            social_linkedin,
+            first_seen_at as timestamp
+        FROM attendees
+        WHERE DATE(first_seen_at) = CURRENT_DATE
+        ORDER BY first_seen_at DESC
+    """
+    
+    return run_query(query)
 
 def get_filter_counts(filters: dict) -> dict:
     """
