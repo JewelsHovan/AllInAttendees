@@ -34,6 +34,13 @@ credentials.json
 *.bak
 ~*
 
+
+# Sensitive files - DO NOT COMMIT
+database/db_config.py
+.streamlit/secrets.toml
+*.pyc
+.env
+
 # Keep data but you may want to exclude large datasets
 # Uncomment these if data gets too large:
 # data/runs/
