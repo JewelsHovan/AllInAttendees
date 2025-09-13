@@ -458,11 +458,11 @@ def get_ai_maturity_analysis() -> pd.DataFrame:
         GROUP BY detail_ai_maturity
         ORDER BY 
             CASE detail_ai_maturity
-                WHEN 'Not started' THEN 1
-                WHEN 'Exploring' THEN 2
-                WHEN 'Implementing' THEN 3
-                WHEN 'Scaling' THEN 4
-                WHEN 'Advanced' THEN 5
+                WHEN 'No initiative planned' THEN 1
+                WHEN 'Interest, but no project' THEN 2
+                WHEN 'Pilot project underway' THEN 3
+                WHEN 'Partial deployment' THEN 4
+                WHEN 'Strategic adoption' THEN 5
                 ELSE 6
             END
     """

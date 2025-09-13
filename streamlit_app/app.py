@@ -342,55 +342,96 @@ with tabs[3]:
     geo_data = get_geographic_distribution()
     
     if not geo_data.empty:
-        col1, col2 = st.columns([2, 1])
+        # Clean up Quebec encoding issue
+        geo_data['province'] = geo_data['province'].replace('QuÃ©bec', 'Quebec')
+        
+        # Country summary
+        country_summary = geo_data.groupby('country').agg({
+            'attendee_count': 'sum',
+            'unique_orgs': 'sum',
+            'new_this_week': 'sum'
+        }).reset_index().sort_values('attendee_count', ascending=False)
+        
+        col1, col2 = st.columns(2)
         
         with col1:
-            # Country map
-            country_summary = geo_data.groupby('country').agg({
-                'attendee_count': 'sum',
-                'unique_orgs': 'sum',
-                'new_this_week': 'sum'
-            }).reset_index()
+            # International attendees (excluding Canada)
+            st.subheader("🌎 International Attendees")
+            international = country_summary[country_summary['country'] != 'Canada'].head(20)
             
-            fig = px.choropleth(
-                country_summary,
-                locations='country',
-                locationmode='country names',
-                color='attendee_count',
-                hover_data=['unique_orgs', 'new_this_week'],
-                title='Attendees by Country',
-                color_continuous_scale='Blues'
-            )
-            fig.update_layout(height=500)
-            st.plotly_chart(fig, use_container_width=True)
+            if not international.empty:
+                fig = px.bar(
+                    international,
+                    x='attendee_count',
+                    y='country',
+                    orientation='h',
+                    title='Top Countries (Excluding Canada)',
+                    text='attendee_count',
+                    color='attendee_count',
+                    color_continuous_scale='Teal'
+                )
+                fig.update_traces(texttemplate='%{text}', textposition='outside')
+                fig.update_layout(
+                    yaxis={'categoryorder':'total ascending'}, 
+                    height=500,
+                    showlegend=False
+                )
+                st.plotly_chart(fig, use_container_width=True)
         
         with col2:
-            # Top countries list
-            st.subheader("Top Countries")
-            top_countries = country_summary.nlargest(10, 'attendee_count')
-            for _, row in top_countries.iterrows():
-                st.write(f"**{row['country']}**: {row['attendee_count']:,} attendees")
-                if row['new_this_week'] > 0:
-                    st.caption(f"↗️ +{row['new_this_week']} this week")
+            # Country statistics
+            st.subheader("📊 Geographic Stats")
+            canada_count = country_summary[country_summary['country'] == 'Canada']['attendee_count'].sum() if 'Canada' in country_summary['country'].values else 0
+            intl_count = country_summary[country_summary['country'] != 'Canada']['attendee_count'].sum()
+            total_countries = len(country_summary)
+            
+            st.metric("Canadian Attendees", f"{canada_count:,}")
+            st.metric("International Attendees", f"{intl_count:,}")
+            st.metric("Countries Represented", f"{total_countries}")
+            
+            if canada_count > 0:
+                intl_percentage = (intl_count / (canada_count + intl_count) * 100)
+                st.metric("International %", f"{intl_percentage:.1f}%")
     
-    # Province breakdown for top countries
-    st.subheader("Provincial/State Breakdown")
-    top_country = st.selectbox(
-        "Select Country:",
-        geo_data['country'].unique()
-    )
-    
-    province_data = geo_data[geo_data['country'] == top_country]
-    if not province_data.empty and province_data['province'].notna().any():
-        fig = px.bar(
-            province_data[province_data['province'].notna()],
-            x='attendee_count',
-            y='province',
-            orientation='h',
-            title=f"Distribution in {top_country}"
-        )
-        fig.update_layout(yaxis={'categoryorder':'total ascending'})
-        st.plotly_chart(fig, use_container_width=True)
+    # Province breakdown for Canada
+    if 'Canada' in geo_data['country'].values:
+        st.subheader("🇨🇦 Canadian Provincial Distribution")
+        
+        canada_data = geo_data[geo_data['country'] == 'Canada']
+        province_data = canada_data[canada_data['province'].notna()].copy()
+        
+        if not province_data.empty:
+            # Clean up province names
+            province_data['province'] = province_data['province'].replace({
+                'QuÃ©bec': 'Quebec',
+                'Québec': 'Quebec',
+                'Ile-du-Prince-Édouard / Prince Edward Island': 'Prince Edward Island',
+                'Île-du-Prince-Édouard / Prince Edward Island': 'Prince Edward Island'
+            })
+            
+            # Aggregate by province after cleaning
+            province_summary = province_data.groupby('province').agg({
+                'attendee_count': 'sum',
+                'unique_orgs': 'sum'
+            }).reset_index().sort_values('attendee_count', ascending=False)
+            
+            fig = px.bar(
+                province_summary,
+                x='attendee_count',
+                y='province',
+                orientation='h',
+                title='Attendees by Canadian Province',
+                text='attendee_count',
+                color='attendee_count',
+                color_continuous_scale='Blues'
+            )
+            fig.update_traces(texttemplate='%{text}', textposition='outside')
+            fig.update_layout(
+                yaxis={'categoryorder':'total ascending'},
+                height=400,
+                showlegend=False
+            )
+            st.plotly_chart(fig, use_container_width=True)
 
 # Tab 5: Industries & Organizations
 with tabs[4]:
@@ -441,7 +482,15 @@ with tabs[5]:
     with col2:
         # Job titles word cloud
         st.subheader("Common Job Titles")
-        job_titles = df['jobTitle'].value_counts().head(20) if 'jobTitle' in df.columns else pd.Series()
+        
+        # Handle both camelCase (CSV) and snake_case (database) column names
+        if 'jobTitle' in df.columns:
+            job_titles = df['jobTitle'].value_counts().head(20)
+        elif 'job_title' in df.columns:
+            job_titles = df['job_title'].value_counts().head(20)
+        else:
+            job_titles = pd.Series()
+            
         if not job_titles.empty:
             fig = px.treemap(
                 names=job_titles.index,
@@ -476,21 +525,44 @@ with tabs[6]:
         # AI Maturity
         ai_maturity = get_ai_maturity_analysis()
         if not ai_maturity.empty:
-            # Order the maturity levels
-            maturity_order = ['Not started', 'Exploring', 'Implementing', 'Scaling', 'Advanced']
+            # Order the maturity levels based on actual database values
+            maturity_order = [
+                'No initiative planned',
+                'Interest, but no project', 
+                'Pilot project underway',
+                'Partial deployment',
+                'Strategic adoption'
+            ]
+            
+            # Only include categories that exist in the data
+            existing_categories = ai_maturity['maturity_level'].unique()
+            ordered_categories = [cat for cat in maturity_order if cat in existing_categories]
+            
+            # Handle any unexpected categories
+            for cat in existing_categories:
+                if cat not in ordered_categories:
+                    ordered_categories.append(cat)
+            
             ai_maturity['maturity_level'] = pd.Categorical(
                 ai_maturity['maturity_level'], 
-                categories=maturity_order, 
+                categories=ordered_categories, 
                 ordered=True
             )
             ai_maturity = ai_maturity.sort_values('maturity_level')
             
-            fig = px.funnel(
+            # Use a bar chart instead of funnel for better visualization
+            fig = px.bar(
                 ai_maturity,
-                y='maturity_level',
                 x='count',
-                title="AI Maturity Distribution"
+                y='maturity_level',
+                orientation='h',
+                title="AI Maturity Distribution",
+                text='count',
+                color='count',
+                color_continuous_scale='Blues'
             )
+            fig.update_traces(texttemplate='%{text}', textposition='outside')
+            fig.update_layout(showlegend=False, height=400)
             st.plotly_chart(fig, use_container_width=True)
 
 # Tab 2: New Attendees  
