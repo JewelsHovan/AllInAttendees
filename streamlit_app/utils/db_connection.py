@@ -10,6 +10,7 @@ import pandas as pd
 from typing import Optional, Dict, Any, List
 from datetime import datetime
 import logging
+import warnings
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -49,7 +50,6 @@ def get_connection():
         st.cache_resource.clear()
         return init_connection()
 
-@st.cache_data(ttl=600)  # Default 10 minute cache
 def run_query(query: str, params: Optional[tuple] = None, ttl: Optional[int] = None) -> pd.DataFrame:
     """
     Execute a query and return results as DataFrame
@@ -71,7 +71,33 @@ def run_query(query: str, params: Optional[tuple] = None, ttl: Optional[int] = N
         if ttl is not None:
             run_query.clear()  # Clear cache for this specific query
             
-        df = pd.read_sql_query(query, conn, params=params)
+        # Execute query with cursor for better parameter handling
+        cursor = conn.cursor()
+        
+        # Execute the query
+        try:
+            if params:
+                # Ensure params is a tuple
+                if not isinstance(params, tuple):
+                    params = tuple(params) if hasattr(params, '__iter__') else (params,)
+                cursor.execute(query, params)
+            else:
+                cursor.execute(query)
+        except Exception as exec_error:
+            logger.error(f"Query execution error: {exec_error}")
+            logger.error(f"Query: {query[:500]}...")  # Log first 500 chars of query
+            logger.error(f"Params: {params}")
+            raise
+        
+        # Fetch column names
+        columns = [desc[0] for desc in cursor.description]
+        
+        # Fetch all results
+        results = cursor.fetchall()
+        cursor.close()
+        
+        # Convert to DataFrame
+        df = pd.DataFrame(results, columns=columns)
         return df
     except Exception as e:
         st.error(f"Query failed: {str(e)}")

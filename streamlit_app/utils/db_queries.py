@@ -10,6 +10,146 @@ from datetime import datetime, timedelta
 from .db_connection import run_query
 
 @st.cache_data(ttl=600)
+def get_attendees_df() -> pd.DataFrame:
+    """
+    Get all attendees as a DataFrame
+    """
+    query = """
+        SELECT * FROM attendees
+        ORDER BY first_seen_at DESC
+    """
+    return run_query(query)
+
+def get_statistics() -> dict:
+    """
+    Get overall statistics from the database
+    """
+    query = """
+        SELECT 
+            COUNT(*) as total_attendees,
+            COUNT(DISTINCT organization) as unique_companies,
+            COUNT(DISTINCT detail_country) as unique_countries,
+            COUNT(DISTINCT detail_industry) as unique_industries
+        FROM attendees
+    """
+    result = run_query(query)
+    
+    if not result.empty:
+        row = result.iloc[0]
+        stats = {
+            'total_attendees': int(row['total_attendees']),
+            'unique_companies': int(row['unique_companies']),
+            'unique_countries': int(row['unique_countries']),
+            'unique_industries': int(row['unique_industries']),
+            'data_completeness': {},
+            'top_values': {}
+        }
+        
+        # Get data completeness
+        completeness_query = """
+            SELECT 
+                'firstName' as field, COUNT(first_name) as count, COUNT(*) as total FROM attendees
+            UNION ALL
+            SELECT 'lastName', COUNT(last_name), COUNT(*) FROM attendees
+            UNION ALL
+            SELECT 'email', COUNT(email), COUNT(*) FROM attendees
+            UNION ALL
+            SELECT 'organization', COUNT(organization), COUNT(*) FROM attendees
+            UNION ALL
+            SELECT 'jobTitle', COUNT(job_title), COUNT(*) FROM attendees
+            UNION ALL
+            SELECT 'detail_country', COUNT(detail_country), COUNT(*) FROM attendees
+            UNION ALL
+            SELECT 'detail_industry', COUNT(detail_industry), COUNT(*) FROM attendees
+            UNION ALL
+            SELECT 'detail_interests', COUNT(detail_interests), COUNT(*) FROM attendees
+            UNION ALL
+            SELECT 'detail_motivation', COUNT(detail_motivation), COUNT(*) FROM attendees
+        """
+        comp_result = run_query(completeness_query)
+        
+        for _, row in comp_result.iterrows():
+            stats['data_completeness'][row['field']] = {
+                'count': int(row['count']),
+                'percentage': (row['count'] / row['total'] * 100) if row['total'] > 0 else 0
+            }
+        
+        return stats
+    
+    return {}
+
+def get_field_distribution(field: str, top_n: int = 20) -> pd.DataFrame:
+    """
+    Get distribution of values for a specific field
+    """
+    # Map field names to database columns
+    field_mapping = {
+        'organization': 'organization',
+        'detail_country': 'detail_country',
+        'detail_industry': 'detail_industry',
+        'detail_position_type': 'detail_position_type',
+        'detail_org_type': 'detail_org_type',
+        'detail_ai_maturity': 'detail_ai_maturity'
+    }
+    
+    db_field = field_mapping.get(field, field)
+    
+    query = f"""
+        SELECT 
+            {db_field} as Value,
+            COUNT(*) as Count,
+            ROUND(100.0 * COUNT(*) / (SELECT COUNT(*) FROM attendees), 2) as Percentage
+        FROM attendees
+        WHERE {db_field} IS NOT NULL
+        GROUP BY {db_field}
+        ORDER BY Count DESC
+        LIMIT %s
+    """
+    
+    return run_query(query, (top_n,))
+
+def get_growth_metrics(days: int = 30) -> pd.DataFrame:
+    """
+    Get growth metrics over time
+    """
+    query = """
+        SELECT 
+            DATE(first_seen_at) as date,
+            COUNT(*) as new_signups,
+            SUM(COUNT(*)) OVER (ORDER BY DATE(first_seen_at)) as cumulative_total
+        FROM attendees
+        WHERE first_seen_at >= CURRENT_DATE - INTERVAL '%s days'
+        GROUP BY DATE(first_seen_at)
+        ORDER BY date
+    """
+    
+    return run_query(query, (days,))
+
+def get_new_attendees_summary() -> dict:
+    """
+    Get summary of new attendees over different periods
+    """
+    query = """
+        SELECT 
+            COUNT(CASE WHEN first_seen_at >= CURRENT_DATE THEN 1 END) as today,
+            COUNT(CASE WHEN first_seen_at >= CURRENT_DATE - INTERVAL '1 day' THEN 1 END) as last_24h,
+            COUNT(CASE WHEN first_seen_at >= CURRENT_DATE - INTERVAL '7 days' THEN 1 END) as last_week,
+            COUNT(CASE WHEN first_seen_at >= CURRENT_DATE - INTERVAL '30 days' THEN 1 END) as last_month
+        FROM attendees
+    """
+    
+    result = run_query(query)
+    if not result.empty:
+        row = result.iloc[0]
+        return {
+            'today': int(row['today']),
+            'last_24h': int(row['last_24h']),
+            'last_week': int(row['last_week']),
+            'last_month': int(row['last_month'])
+        }
+    
+    return {'today': 0, 'last_24h': 0, 'last_week': 0, 'last_month': 0}
+
 def get_dashboard_summary() -> dict:
     """
     Get summary statistics for dashboard header
@@ -366,3 +506,99 @@ def get_data_quality_metrics() -> pd.DataFrame:
     """
     
     return run_query(query)
+
+def get_filtered_attendees(filters: dict, limit: int = 500) -> pd.DataFrame:
+    """
+    Get attendees based on filter criteria
+    Filters can include:
+    - executives: bool - filter for executive positions
+    - ai_seekers: bool - filter for AI solution seekers  
+    - canada: bool - filter for Canadian attendees
+    - industry: str - specific industry filter
+    - org_type: str - organization type filter
+    """
+    
+    where_clauses = []
+    params = []
+    
+    if filters.get('executives'):
+        where_clauses.append("""
+            detail_position_type = 'Executive & VP'
+        """)
+    
+    if filters.get('ai_seekers'):
+        where_clauses.append("""
+            detail_ai_maturity IN ('Interest, but no project', 'Pilot project underway')
+        """)
+    
+    if filters.get('canada'):
+        where_clauses.append("detail_country = 'Canada'")
+    
+    if filters.get('industry'):
+        where_clauses.append("detail_industry = %s")
+        params.append(filters['industry'])
+    
+    if filters.get('org_type'):
+        where_clauses.append("detail_org_type = %s")
+        params.append(filters['org_type'])
+    
+    # Build the query
+    query = f"""
+        SELECT 
+            id,
+            first_name || ' ' || last_name as name,
+            email,
+            organization,
+            job_title,
+            detail_country as country,
+            detail_industry as industry,
+            detail_position_type as position_type,
+            detail_ai_maturity as ai_maturity,
+            detail_interests as interests,
+            detail_motivation as motivation,
+            first_seen_at
+        FROM attendees
+        {'WHERE ' + ' AND '.join(where_clauses) if where_clauses else ''}
+        ORDER BY first_seen_at DESC
+        LIMIT %s
+    """
+    
+    params.append(limit)
+    return run_query(query, tuple(params))
+
+def get_filter_counts(filters: dict) -> dict:
+    """
+    Get counts for each filter option
+    """
+    counts = {}
+    
+    # Executives count
+    exec_query = """
+        SELECT COUNT(*) FROM attendees
+        WHERE detail_position_type IN ('Executive & VP', 'Senior Manager & Director')
+           OR UPPER(job_title) LIKE '%%CEO%%'
+           OR UPPER(job_title) LIKE '%%CTO%%'
+           OR UPPER(job_title) LIKE '%%PRESIDENT%%'
+           OR UPPER(job_title) LIKE '%%DIRECTOR%%'
+           OR UPPER(job_title) LIKE '%%FOUNDER%%'
+    """
+    result = run_query(exec_query)
+    counts['executives'] = result.iloc[0, 0] if not result.empty else 0
+    
+    # AI Seekers count
+    ai_query = """
+        SELECT COUNT(*) FROM attendees
+        WHERE detail_ai_maturity IN ('Interest, but no project', 'Pilot project underway', 'Partial deployment')
+           OR detail_category = 'AI Adopter'
+           OR LOWER(detail_interests) LIKE '%%ai%%'
+           OR LOWER(detail_motivation) LIKE '%%ai%%'
+    """
+    result = run_query(ai_query)
+    counts['ai_seekers'] = result.iloc[0, 0] if not result.empty else 0
+    
+    # Canada count
+    canada_query = "SELECT COUNT(*) FROM attendees WHERE detail_country = 'Canada'"
+    result = run_query(canada_query)
+    counts['canada'] = result.iloc[0, 0] if not result.empty else 0
+    
+    return counts

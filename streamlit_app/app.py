@@ -23,8 +23,7 @@ from utils.data_loader import (
     get_field_distribution,
     search_attendees,
     get_growth_metrics,
-    get_new_attendees_summary,
-    get_comparison_data
+    get_new_attendees_summary
 )
 from utils.visualizations import (
     create_bar_chart,
@@ -36,7 +35,6 @@ from utils.visualizations import (
 )
 from utils.db_connection import (
     test_connection,
-    get_statistics,
     add_refresh_button,
     clear_all_caches
 )
@@ -165,12 +163,19 @@ with st.sidebar:
         # Refresh button
         add_refresh_button()
         
+        # Set selected_run to 'Latest' for live database mode
+        selected_run = 'Latest'
+        
         # Load current data
         df = load_run_data()
         
     else:
-        # Get available runs from database
+        # Get available runs from the runs directory
         runs = get_available_runs()
+        
+        # Remove 'Latest' from the list for historical runs
+        if 'Latest' in runs:
+            runs.remove('Latest')
         
         if not runs:
             st.error("No historical runs found")
@@ -180,20 +185,23 @@ with st.sidebar:
         selected_run = st.selectbox(
             "Choose a run to analyze:",
             options=runs,
-            format_func=lambda x: f"{x['display_name']} ({x['attendee_count']} attendees, +{x.get('new_attendees', 0)} new)",
+            format_func=lambda x: f"{x}" if x else "Unknown",
             index=0
         )
         
-        # Run info
-        st.subheader("ℹ️ Run Information")
-        st.write(f"**Date:** {selected_run['timestamp'].strftime('%B %d, %Y')}")
-        st.write(f"**Time:** {selected_run['timestamp'].strftime('%I:%M %p')}")
-        st.write(f"**Total:** {selected_run['attendee_count']:,}")
-        st.write(f"**New:** {selected_run.get('new_attendees', 0):,}")
-        st.write(f"**Updated:** {selected_run.get('updated_attendees', 0):,}")
+        # Parse run date from the directory name (format: YYYY-MM-DD_HHMMSS)
+        if selected_run and selected_run != 'Latest':
+            try:
+                from datetime import datetime
+                date_parts = selected_run.split('_')[0].split('-')
+                if len(date_parts) == 3:
+                    run_date = f"{date_parts[0]}-{date_parts[1]}-{date_parts[2]}"
+                    st.write(f"**Run Date:** {run_date}")
+            except:
+                pass
         
         # Load selected run data
-        df = load_run_data(selected_run['id'])
+        df = load_run_data(selected_run)
     
     st.markdown("---")
     
@@ -207,13 +215,13 @@ with st.sidebar:
 
 # Main content area with tabs
 tabs = st.tabs([
-    "📊 Overview", 
+    "📊 Overview",
+    "🆕 New Attendees", 
     "📈 Growth Analytics",
     "🌍 Geographic Distribution", 
     "🏢 Industries & Organizations", 
     "👥 Roles & Positions",
     "🎯 Interests & AI Maturity",
-    "🆕 New Attendees",
     "📋 Data Quality"
 ])
 
@@ -228,10 +236,10 @@ with tabs[0]:
     
     with col1:
         st.subheader("📈 Key Metrics")
-        st.write(f"**Total Attendees:** {stats['total_attendees']:,}")
-        st.write(f"**Unique Organizations:** {stats['unique_companies']:,}")
-        st.write(f"**Countries Represented:** {stats['unique_countries']:,}")
-        st.write(f"**Industries:** {stats['unique_industries']:,}")
+        st.write(f"**Total Attendees:** {stats.get('total_attendees', 0):,}")
+        st.write(f"**Unique Organizations:** {stats.get('unique_companies', 0):,}")
+        st.write(f"**Countries Represented:** {stats.get('unique_countries', 0):,}")
+        st.write(f"**Industries:** {stats.get('unique_industries', 0):,}")
         
         # New attendees summary
         new_summary = get_new_attendees_summary()
@@ -257,8 +265,8 @@ with tabs[0]:
             fig.update_layout(height=400, yaxis={'categoryorder':'total ascending'})
             st.plotly_chart(fig, use_container_width=True)
 
-# Tab 2: Growth Analytics (NEW!)
-with tabs[1]:
+# Tab 3: Growth Analytics (NEW!)
+with tabs[2]:
     st.header("📈 Growth Analytics")
     
     # Date range selector
@@ -327,8 +335,8 @@ with tabs[1]:
             total_growth = growth_data['new_signups'].sum()
             st.metric(f"Total in {days_back} Days", f"{total_growth:,}")
 
-# Tab 3: Geographic Distribution
-with tabs[2]:
+# Tab 4: Geographic Distribution
+with tabs[3]:
     st.header("🌍 Geographic Distribution")
     
     geo_data = get_geographic_distribution()
@@ -384,8 +392,8 @@ with tabs[2]:
         fig.update_layout(yaxis={'categoryorder':'total ascending'})
         st.plotly_chart(fig, use_container_width=True)
 
-# Tab 4: Industries & Organizations
-with tabs[3]:
+# Tab 5: Industries & Organizations
+with tabs[4]:
     st.header("🏢 Industries & Organizations")
     
     col1, col2 = st.columns(2)
@@ -404,6 +412,8 @@ with tabs[3]:
             
             # Growth rates
             st.subheader("📈 Fastest Growing Industries")
+            # Convert growth_rate_pct to numeric, handling any non-numeric values
+            industry_data['growth_rate_pct'] = pd.to_numeric(industry_data['growth_rate_pct'], errors='coerce').fillna(0)
             growing = industry_data[industry_data['growth_rate_pct'] > 0].nlargest(5, 'growth_rate_pct')
             for _, row in growing.iterrows():
                 st.write(f"**{row['industry']}**: +{row['growth_rate_pct']:.1f}% growth")
@@ -415,8 +425,8 @@ with tabs[3]:
             fig = create_bar_chart(org_type_dist, "Organization Types", color_scale="Oranges")
             st.plotly_chart(fig, use_container_width=True)
 
-# Tab 5: Roles & Positions
-with tabs[4]:
+# Tab 6: Roles & Positions
+with tabs[5]:
     st.header("👥 Roles & Positions")
     
     col1, col2 = st.columns(2)
@@ -441,8 +451,8 @@ with tabs[4]:
             )
             st.plotly_chart(fig, use_container_width=True)
 
-# Tab 6: Interests & AI Maturity
-with tabs[5]:
+# Tab 7: Interests & AI Maturity
+with tabs[6]:
     st.header("🎯 Interests & AI Maturity")
     
     col1, col2 = st.columns(2)
@@ -483,15 +493,111 @@ with tabs[5]:
             )
             st.plotly_chart(fig, use_container_width=True)
 
-# Tab 7: New Attendees
-with tabs[6]:
-    st.header("🆕 New Attendees")
+# Tab 2: New Attendees  
+with tabs[1]:
+    st.header("🆕 New Attendees & Filtered Lists")
     
-    # Time range selector
-    hours_back = st.slider("Show new attendees from last N hours:", 24, 168, 48)
+    # Add filtering section
+    st.subheader("🔍 Quick Filters")
     
-    # Get recent activity
-    recent_activity = get_recent_activity(hours_back)
+    # Import filter functions if in live mode
+    if selected_run == 'Latest':
+        from utils.db_queries import get_filtered_attendees, get_filter_counts
+        
+        # Get filter counts
+        filter_counts = get_filter_counts({})
+        
+        # Create filter columns
+        filter_col1, filter_col2, filter_col3, filter_col4 = st.columns(4)
+        
+        with filter_col1:
+            show_ai_seekers = st.checkbox(
+                f"🤖 AI Solution Seekers ({filter_counts.get('ai_seekers', 0):,})",
+                help="People exploring or implementing AI solutions"
+            )
+        
+        with filter_col2:
+            show_executives = st.checkbox(
+                f"👔 Executives ({filter_counts.get('executives', 0):,})",
+                help="C-level, VPs, Directors, Founders"
+            )
+        
+        with filter_col3:
+            show_canada = st.checkbox(
+                f"🇨🇦 Canada ({filter_counts.get('canada', 0):,})",
+                help="Attendees from Canada"
+            )
+        
+        with filter_col4:
+            export_filtered = st.button("📥 Export Filtered List", type="secondary")
+        
+        # Apply filters if any are selected
+        active_filters = {}
+        if show_ai_seekers:
+            active_filters['ai_seekers'] = True
+        if show_executives:
+            active_filters['executives'] = True
+        if show_canada:
+            active_filters['canada'] = True
+        
+        # Show filtered results if filters are active
+        if active_filters:
+            st.divider()
+            st.subheader("📊 Filtered Attendees")
+            
+            filtered_df = get_filtered_attendees(active_filters, limit=1000)
+            
+            if not filtered_df.empty:
+                # Show summary
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    st.metric("Total Matches", f"{len(filtered_df):,}")
+                with col2:
+                    unique_orgs = filtered_df['organization'].nunique() if 'organization' in filtered_df.columns else 0
+                    st.metric("Unique Organizations", f"{unique_orgs:,}")
+                with col3:
+                    unique_countries = filtered_df['country'].nunique() if 'country' in filtered_df.columns else 0
+                    st.metric("Countries", f"{unique_countries:,}")
+                
+                # Display the filtered data
+                display_cols = ['name', 'organization', 'job_title', 'country', 'ai_maturity']
+                st.dataframe(
+                    filtered_df[display_cols].head(100),
+                    use_container_width=True,
+                    height=400
+                )
+                
+                # Export functionality
+                if export_filtered:
+                    csv = filtered_df.to_csv(index=False)
+                    st.download_button(
+                        label="📥 Download Full Filtered List (CSV)",
+                        data=csv,
+                        file_name=f"filtered_attendees_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv",
+                        mime="text/csv"
+                    )
+            else:
+                st.info("No attendees match the selected filters")
+    
+    # Divider between filters and recent activity
+    st.divider()
+    st.subheader("📅 Recent Activity")
+    
+    # Check if we're viewing historical or live data
+    if selected_run != 'Latest':
+        # Historical run - compare with previous run
+        from utils.data_loader import get_new_attendees_for_historical_run
+        recent_activity = get_new_attendees_for_historical_run(df, selected_run)
+        
+        if not recent_activity.empty:
+            st.info(f"Showing new attendees compared to previous run")
+    else:
+        # Live database - use time-based query
+        # Time range selector
+        hours_back = st.slider("Show new attendees from last N hours:", 24, 168, 48)
+        
+        # Get recent activity
+        recent_activity = get_recent_activity(hours_back)
     
     if not recent_activity.empty:
         # Split by activity type
@@ -518,7 +624,7 @@ with tabs[6]:
         
         # Timeline chart
         st.subheader("Activity Timeline")
-        activity_by_hour = recent_activity.set_index('timestamp').resample('1H').size()
+        activity_by_hour = recent_activity.set_index('timestamp').resample('1h').size()
         
         fig = px.line(
             x=activity_by_hour.index,
@@ -527,6 +633,8 @@ with tabs[6]:
             labels={'x': 'Time', 'y': 'Number of Activities'}
         )
         st.plotly_chart(fig, use_container_width=True)
+    else:
+        st.info("No new attendees or activity to show for this period.")
 
 # Tab 8: Data Quality
 with tabs[7]:
@@ -543,7 +651,7 @@ with tabs[7]:
             {
                 'Field': field.replace('detail_', '').replace('_', ' ').title(),
                 'Filled': data['count'],
-                'Missing': stats['total_attendees'] - data['count'],
+                'Missing': stats.get('total_attendees', 0) - data['count'],
                 'Completeness': f"{data['percentage']:.1f}%"
             }
             for field, data in stats['data_completeness'].items()
