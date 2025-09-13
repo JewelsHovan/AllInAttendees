@@ -622,17 +622,18 @@ with tabs[1]:
                     use_container_width=True
                 )
         
-        # Timeline chart
-        st.subheader("Activity Timeline")
-        activity_by_hour = recent_activity.set_index('timestamp').resample('1h').size()
-        
-        fig = px.line(
-            x=activity_by_hour.index,
-            y=activity_by_hour.values,
-            title=f"Activity in Last {hours_back} Hours",
-            labels={'x': 'Time', 'y': 'Number of Activities'}
-        )
-        st.plotly_chart(fig, use_container_width=True)
+        # Timeline chart - only show for live database
+        if data_source == "Live Database":
+            st.subheader("Activity Timeline")
+            activity_by_hour = recent_activity.set_index('timestamp').resample('1h').size()
+            
+            fig = px.line(
+                x=activity_by_hour.index,
+                y=activity_by_hour.values,
+                title=f"Activity in Last {hours_back} Hours",
+                labels={'x': 'Time', 'y': 'Number of Activities'}
+            )
+            st.plotly_chart(fig, use_container_width=True)
     else:
         st.info("No new attendees or activity to show for this period.")
 
