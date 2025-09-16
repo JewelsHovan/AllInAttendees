@@ -111,20 +111,30 @@ python3 -c "import requests, pandas, json, csv" 2>/dev/null || {
     exit 1
 }
 
-# Check token validity
-echo -e "${BLUE}Checking authentication token...${NC}"
-if python3 refresh_token.py 2>&1 | grep -q "Token is valid"; then
-    echo -e "${GREEN}✓ Authentication token is valid${NC}"
+# Refresh bearer token automatically
+echo -e "${BLUE}Refreshing authentication token...${NC}"
+if python3 refresh_bearer_token.py --auto > "${LOGS_DIR}/token_refresh.log" 2>&1; then
+    if grep -q "SUCCESS" "${LOGS_DIR}/token_refresh.log"; then
+        echo -e "${GREEN}✓ Bearer token refreshed successfully${NC}"
+        grep "Token valid until" "${LOGS_DIR}/token_refresh.log" | tail -1 || true
+    elif grep -q "Time remaining:" "${LOGS_DIR}/token_refresh.log"; then
+        echo -e "${GREEN}✓ Current token is still valid${NC}"
+        grep "Time remaining:" "${LOGS_DIR}/token_refresh.log" | tail -1 || true
+    else
+        echo -e "${YELLOW}⚠️ Token refresh completed with warnings${NC}"
+        echo -e "${YELLOW}Check log: ${LOGS_DIR}/token_refresh.log${NC}"
+    fi
 else
-    echo -e "${RED}✗ Authentication token has expired or is invalid${NC}"
-    echo -e "${YELLOW}Please update the token by following these steps:${NC}"
-    echo "1. Open https://app.swapcard.com/event/all-in-2025/people"
-    echo "2. Open Developer Tools (F12) > Network tab"
-    echo "3. Refresh the page and find a GraphQL request"
-    echo "4. Copy the 'authorization: Bearer ...' header"
-    echo "5. Run: python3 refresh_token.py --update 'Bearer YOUR_NEW_TOKEN'"
-    exit 1
+    echo -e "${RED}✗ Failed to refresh bearer token${NC}"
+    echo -e "${YELLOW}Error details in: ${LOGS_DIR}/token_refresh.log${NC}"
+    echo -e "${YELLOW}The token may have expired and requires manual login:${NC}"
+    echo "1. Login to https://app.swapcard.com/event/all-in-2025/people"
+    echo "2. Run: python3 refresh_bearer_token.py"
+    echo "3. Follow the prompts to update config.py"
+    echo ""
+    echo -e "${YELLOW}Attempting to continue with existing token...${NC}"
 fi
+echo ""
 
 # Step 1: Scrape all attendees
 echo -e "${YELLOW}Step 1/3: Scraping all attendees${NC}"

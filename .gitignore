@@ -43,5 +43,5 @@ database/db_config.py
 
 # Keep data but you may want to exclude large datasets
 # Uncomment these if data gets too large:
-# data/runs/
-# data/checkpoints/
+data/runs/
+data/checkpoints/
