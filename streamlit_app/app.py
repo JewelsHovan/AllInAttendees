@@ -178,6 +178,54 @@ with st.sidebar:
         # Load current data
         df = load_run_data()
         
+        # Download section
+        st.markdown("---")
+        st.subheader("📥 Download Data")
+        
+        if not df.empty:
+            # Show record count
+            st.info(f"📊 {len(df):,} attendees available for download")
+            
+            # Prepare CSV data
+            csv_data = df.to_csv(index=False).encode('utf-8-sig')  # utf-8-sig adds BOM for Excel
+            
+            # Generate filename with current date
+            current_date = datetime.now().strftime('%Y-%m-%d')
+            csv_filename = f"all_attendees_{current_date}.csv"
+            
+            # CSV Download button
+            st.download_button(
+                label="⬇️ Download as CSV",
+                data=csv_data,
+                file_name=csv_filename,
+                mime="text/csv",
+                help="Download complete attendee data as CSV file"
+            )
+            
+            # Prepare JSON data
+            json_data = df.to_json(orient='records', indent=2)
+            json_filename = f"all_attendees_{current_date}.json"
+            
+            # JSON Download button
+            st.download_button(
+                label="⬇️ Download as JSON",
+                data=json_data,
+                file_name=json_filename,
+                mime="application/json",
+                help="Download complete attendee data as JSON file"
+            )
+            
+            # Info about fields
+            with st.expander("ℹ️ Download Info"):
+                st.write(f"**Total Records:** {len(df):,}")
+                st.write(f"**Total Columns:** {len(df.columns)}")
+                st.write("**Key Fields Include:**")
+                st.write("• Basic: Name, Email, Organization, Job Title")
+                st.write("• Details: Country, Industry, Interests, AI Maturity")
+                st.write("• Metadata: First Seen, Last Updated")
+        else:
+            st.warning("No data available to download")
+        
     else:
         # Get available runs from the runs directory
         runs = get_available_runs()
